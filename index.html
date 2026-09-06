@@ -9,17 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="theme.css?v=royal-cursor-2">
+  <link rel="stylesheet" href="theme.css?v=magic-dust-1">
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
   <header class="topbar">
     <a class="brand" href="#home" aria-label="Go home"><span class="orb"></span>NNZ / PERSONAL SPACE</a>
-    <nav aria-label="Main navigation"
-      <a href="#story">Story</a><a href="#work">Work</a><a href="#thoughts">Library</a>
+    <nav aria-label="Main navigation">
+      <a href="#story">Story</a><a href="#work">Work</a><a href="#thoughts">Library</a><a href="recipes.html">Recipes</a>
     </nav>
-    <button class="sound-button" id="soundToggle" aria-pressed="false"><span>◌</span> Brown noise</button>
+    <button class="sound-button" id="soundToggle" aria-pressed="false"><span>◌</span> Ambient sound</button>
   </header>
 
   <main id="home">
@@ -139,9 +139,10 @@
   <div class="sound-panel" id="soundPanel">
     <span>AMBIENT SPACE</span>
     <button data-sound="brown">Brown noise</button><button data-sound="rain">Soft rain</button><button data-sound="wood">Wood chime</button>
-    <label class="volume-control">Volume <input id="soundVolume" type="range" min="1" max="8" value="3" aria-label="Ambient sound volume"></label>
+    <label class="volume-control">Volume <input id="soundVolume" type="range" min="1" max="10" value="6" aria-label="Ambient sound volume"></label>
   </div>
   <script src="visitor-counter.js"></script>
-  <script src="script.js?v=library-system-1"></script>
+  <script src="magic-effects.js?v=1"></script>
+  <script src="script.js?v=ambient-fix-1"></script>
 </body>
 </html>

@@ -46,8 +46,5 @@ body{background:radial-gradient(circle at 76% 8%,#686f9f 0,#444970 38%,#25243a 1
 .volume-control{display:flex;align-items:center;gap:9px;width:100%;margin-top:8px;font:500 .68rem "DM Mono";color:#cac4d2}.volume-control input{width:100%;accent-color:var(--gold)}
 .visitor-line{font:500 .76rem "DM Mono"!important;letter-spacing:.04em;color:#d9c191!important;margin-top:26px!important}.visitor-line span{color:#fff;font-size:1rem}
 
-/* Ink-point cursor with a short magical tail. */
-@media(pointer:fine){body,button,a,.window-bar{cursor:url("assets/ink-point.svg?v=royal2") 4 28,auto}a,button,[role="button"],input[type="range"]{cursor:url("assets/ink-point-active.svg?v=royal2") 4 28,pointer}.ink-spark{position:fixed;width:var(--spark-size);height:var(--spark-size);border-radius:50%;background:#9b70e5;box-shadow:0 0 7px rgba(155,112,229,.8),0 0 3px rgba(216,174,104,.8);pointer-events:none;z-index:120;animation:inkMagic .48s ease-out forwards}}
-@keyframes inkMagic{0%{opacity:.9;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--spark-drift),9px) scale(.2)}}
-@media(pointer:coarse),(prefers-reduced-motion:reduce){.ink-spark{display:none!important}body,button,a,.window-bar{cursor:auto}a,button,[role="button"],input[type="range"]{cursor:pointer}}
+.fairy-dust{position:fixed;z-index:9999;left:0;top:0;width:var(--dust-size);height:var(--dust-size);border-radius:50%;background:var(--dust-color);box-shadow:0 0 7px var(--dust-color),0 0 13px var(--dust-color);pointer-events:none;animation:fairyFloat .62s ease-out forwards}.fairy-burst{animation-duration:.82s}@keyframes fairyFloat{0%{opacity:1;transform:translate(-50%,-50%) scale(1.25)}100%{opacity:0;transform:translate(calc(-50% + var(--dust-x)),calc(-50% + var(--dust-y))) scale(.15)}}@media(prefers-reduced-motion:reduce){.fairy-dust{display:none!important}}
 .hero{min-height:auto;padding-bottom:46px}.hero-stage{gap:0}.code-window{margin-top:18px}.secret-star{bottom:30px}
