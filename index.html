@@ -9,11 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="theme.css?v=royal-cursor-2">
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
   <header class="topbar">
     <a class="brand" href="#home" aria-label="Go home"><span class="orb"></span>NNZ / PERSONAL SPACE</a>
@@ -25,12 +24,6 @@
 
   <main id="home">
     <section class="hero section">
-      <aside class="desktop-rail" aria-label="Quick navigation">
-        <a href="#work"><span class="folder-icon">⌑</span>Projects</a>
-        <a href="#story"><span class="folder-icon">⌑</span>About</a>
-        <a href="#thoughts"><span class="folder-icon">⌑</span>Notes</a>
-      </aside>
-
       <div class="hero-stage">
         <img class="left-vase" src="white-flower-vase.png" alt="" aria-hidden="true">
         <article class="window intro-window draggable-window" data-drag-label="Drag this window">
@@ -87,7 +80,7 @@
     <section class="work section" id="work">
       <div class="section-label"><span>02</span> PROBLEMS I’M WORKING ON</div>
       <div class="project-grid">
-        <article class="project-card featured tilt-card">
+        <article class="project-card featured">
           <div class="project-top"><span>IN PROGRESS · SDG 4</span><span class="project-number">01</span></div>
           <h3>Bujhi</h3>
           <p class="project-thesis">Less memorizing.<br>More understanding.</p>
@@ -95,14 +88,14 @@
           <div class="tags"><span>EdTech</span><span>Research</span><span>Next.js</span><span>Social impact</span></div>
           <a href="https://bujhi.page" target="_blank" rel="noreferrer">Visit Bujhi <span>↗</span></a>
         </article>
-        <article class="project-card tilt-card">
+        <article class="project-card">
           <div class="project-top"><span>ACADEMIC BUILD</span><span class="project-number">02</span></div>
           <h3>Healthcare Central</h3>
           <p>A healthcare search and appointment platform connecting patients with doctors, medicine information, caregivers and ambulance services.</p>
           <div class="tags"><span>PHP</span><span>MySQL</span><span>Full stack</span></div>
           <a href="https://github.com/CodeArtisanNNZ/healthcare-system" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
         </article>
-        <article class="project-card idea-card tilt-card">
+        <article class="project-card idea-card">
           <span class="tiny">MY PROCESS</span>
           <ol><li><b>Notice</b><span>What feels unnecessarily difficult?</span></li><li><b>Question</b><span>Who experiences the problem—and why?</span></li><li><b>Build</b><span>What is the smallest useful intervention?</span></li><li><b>Learn</b><span>What did reality prove wrong?</span></li></ol>
         </article>
@@ -156,6 +149,6 @@
     <label class="volume-control">Volume <input id="soundVolume" type="range" min="1" max="8" value="3" aria-label="Ambient sound volume"></label>
   </div>
   <script src="visitor-counter.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js?v=royal-cursor-2"></script>
 </body>
 </html>

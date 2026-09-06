@@ -35,11 +35,8 @@ const navObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(e
 observedSections.forEach(section=>navObserver.observe(section));
 
 if(!reducedMotion&&matchMedia("(pointer:fine)").matches){
-  const aura=document.getElementById("cursorAura");
-  addEventListener("pointermove",event=>{aura.style.transform=`translate3d(${event.clientX}px,${event.clientY}px,0)`;aura.classList.add("visible")},{passive:true});
-  document.querySelectorAll("a,button,.project-card,.window-bar").forEach(el=>{el.addEventListener("pointerenter",()=>aura.classList.add("engaged"));el.addEventListener("pointerleave",()=>aura.classList.remove("engaged"))});
-
-  document.querySelectorAll(".tilt-card").forEach(card=>{card.addEventListener("pointermove",event=>{const r=card.getBoundingClientRect(),x=(event.clientX-r.left)/r.width-.5,y=(event.clientY-r.top)/r.height-.5;card.style.setProperty("--rx",`${-y*4}deg`);card.style.setProperty("--ry",`${x*5}deg`);card.style.setProperty("--mx",`${(x+.5)*100}%`);card.style.setProperty("--my",`${(y+.5)*100}%`)});card.addEventListener("pointerleave",()=>{card.style.setProperty("--rx","0deg");card.style.setProperty("--ry","0deg")})});
+  let lastSpark=0;
+  addEventListener("pointermove",event=>{const now=performance.now();if(now-lastSpark<34)return;lastSpark=now;const spark=document.createElement("i");spark.className="ink-spark";spark.style.left=`${event.clientX-5}px`;spark.style.top=`${event.clientY+8}px`;spark.style.setProperty("--spark-size",`${2+Math.random()*2}px`);spark.style.setProperty("--spark-drift",`${-5+Math.random()*10}px`);document.body.appendChild(spark);spark.addEventListener("animationend",()=>spark.remove())},{passive:true});
 
   document.querySelectorAll(".draggable-window").forEach(win=>{const handle=win.querySelector(".window-bar");let startX,startY,baseX=0,baseY=0,dragging=false;handle.title=win.dataset.dragLabel;handle.addEventListener("pointerdown",event=>{if(event.button!==0)return;dragging=true;startX=event.clientX-baseX;startY=event.clientY-baseY;handle.setPointerCapture(event.pointerId);win.classList.add("dragging")});handle.addEventListener("pointermove",event=>{if(!dragging)return;baseX=event.clientX-startX;baseY=event.clientY-startY;win.style.setProperty("--drag-x",`${baseX}px`);win.style.setProperty("--drag-y",`${baseY}px`)});const finish=()=>{dragging=false;win.classList.remove("dragging")};handle.addEventListener("pointerup",finish);handle.addEventListener("pointercancel",finish);handle.addEventListener("dblclick",()=>{baseX=baseY=0;win.style.setProperty("--drag-x","0px");win.style.setProperty("--drag-y","0px")})});
 }
