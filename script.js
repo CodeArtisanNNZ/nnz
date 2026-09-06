@@ -1,14 +1,4 @@
 const noteButton=document.querySelector(".note-button");const principle=document.getElementById("faith");noteButton.addEventListener("click",()=>principle.classList.add("open"));principle.querySelector("button").addEventListener("click",()=>principle.classList.remove("open"));
-const notes={
-building:["VOLUME / 01","Building","I build after I listen. This volume holds the projects, wrong turns and small decisions behind the work—not only the polished outcome.","#work","Explore my work →"],
-understanding:["VOLUME / 02","Understanding","Notes from learning the Qur’an with meaning and tafsir, and from trying to let faith shape intention, responsibility and service. These are learning notes, not religious rulings.","#story","Read a guiding principle →"],
-remembering:["VOLUME / 03","Remembering","Questions and reflections about Bangladesh, the Indian subcontinent and the histories that continue to shape how we live now.","#thoughts","History notes coming soon"],
-reciting:["খণ্ড / ০৪","আবৃত্তি","বাংলা কবিতা, শব্দের প্রতি ভালোবাসা, আর যে অনুভূতিগুলো কণ্ঠে প্রকাশ করতে চাই—এই খণ্ডটি সম্পূর্ণ বাংলায় থাকবে।","#thoughts","আবৃত্তি শিগগিরই আসছে"],
-reading:["VOLUME / 05","Reading","Books I return to, ideas I disagree with and sentences that changed the direction of a thought.","#thoughts","Reading notes coming soon"],
-making:["VOLUME / 06","Making","Craft ideas, materials, unfinished experiments and the quiet pleasure of making something by hand.","#thoughts","Making notes coming soon"],
-becoming:["VOLUME / 08","Becoming","Lessons from mistakes, challenges behind projects, small comforts and things I have not figured out yet.","#story","Read my story →"]
-};
-const reader=document.getElementById("bookReader"),readerLink=document.getElementById("readerLink");document.querySelectorAll("button.book").forEach(book=>book.addEventListener("click",()=>{const n=notes[book.dataset.book];document.getElementById("bookIndex").textContent=n[0];document.getElementById("bookTitle").textContent=n[1];document.getElementById("bookText").textContent=n[2];readerLink.href=n[3];readerLink.textContent=n[4];reader.classList.add("open");reader.scrollIntoView({behavior:"smooth",block:"center"})}));document.getElementById("closeBook").addEventListener("click",()=>reader.classList.remove("open"));
 const star=document.getElementById("secretStar"),secret=document.getElementById("secretNote");star.addEventListener("click",()=>{secret.classList.add("show");setTimeout(()=>secret.classList.remove("show"),2800)});
 const soundToggle=document.getElementById("soundToggle"),panel=document.getElementById("soundPanel");let ctx,source,filter,gain,timer;
 function stopSound(){if(source){try{source.stop()}catch(e){}source=null}if(timer){clearInterval(timer);timer=null}if(gain&&ctx)gain.gain.linearRampToValueAtTime(.0001,ctx.currentTime+.4);document.querySelectorAll("[data-sound]").forEach(b=>b.classList.remove("active"))}
