@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Recipes, experiments and food memories from Nusaiba Nusrat Zaman.">
+  <title>Kitchen Notes — Nusaiba Nusrat Zaman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+  <header class="recipe-nav"><a href="index.html#thoughts">← Return to my library</a><span>NNZ / KITCHEN NOTES</span></header>
+  <main>
+    <header class="recipe-hero">
+      <p class="kicker">VOLUME 07 · COOKING</p>
+      <h1>Recipes I want<br>to remember.</h1>
+      <p>Food experiments, family memories and instructions written clearly enough to make again.</p>
+    </header>
+
+    <section class="recipe-index" aria-labelledby="recipe-heading">
+      <div><p class="kicker">RECIPE INDEX</p><h2 id="recipe-heading">From my kitchen</h2></div>
+      <p class="edit-note">This collection can grow whenever I have something worth keeping.</p>
+      <div class="recipe-grid" id="recipeGrid"></div>
+    </section>
+  </main>
+
+  <dialog class="recipe-dialog" id="recipeDialog">
+    <button class="close-recipe" id="closeRecipe" aria-label="Close recipe">×</button>
+    <div id="recipeDetails"></div>
+  </dialog>
+  <footer><span>Faith in purpose · Bangladesh in voice · family in memory</span><a href="index.html">nusaibanusratzaman.me</a></footer>
+  <script src="recipes-data.js"></script>
+  <script src="recipes.js"></script>
+</body>
+</html>

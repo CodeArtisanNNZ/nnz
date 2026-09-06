@@ -1,73 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nusaiba Nusrat Zaman — Full-Stack Developer and Social Impact Builder." />
-  <title>Nusaiba Nusrat Zaman</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nusaiba Nusrat Zaman — full-stack developer exploring social problems through technology, leadership and thoughtful action.">
+  <title>Nusaiba Nusrat Zaman — Full-Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--ink:#171320;--plum:#2f2940;--slate:#43425d;--peri:#aeb7dc;--cream:#f6ede4;--lav:#ded9e8;--iris:#8876b1;--gold:#cfa26b;--white:#fffdfb;--shadow:0 22px 60px rgba(18,14,28,.22);--radius:22px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--plum);color:var(--white);font:16px/1.65 Inter,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--gold);color:var(--ink)}
-    #progress{position:fixed;inset:0 auto auto 0;height:4px;width:0;background:linear-gradient(90deg,var(--gold),var(--peri));z-index:100}
-    .aura{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(176,184,221,.16),transparent 67%);transform:translate(-50%,-50%);z-index:0}
-    nav{position:fixed;z-index:50;top:18px;left:50%;transform:translateX(-50%);width:min(92%,1100px);display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid rgba(255,255,255,.16);border-radius:18px;background:rgba(47,41,64,.78);backdrop-filter:blur(18px)}
-    .brand{font:600 15px DM Mono;color:var(--cream)}.nav-links{display:flex;gap:6px}.nav-links a{padding:8px 12px;border-radius:10px;color:#ded9e8;font-size:14px}.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.1);color:#fff}.sound{border:0;border-radius:12px;background:var(--cream);color:var(--ink);padding:9px 12px;cursor:pointer}
-    section{position:relative;z-index:1;min-height:100vh;padding:120px max(6vw,24px) 80px}.wrap{width:min(1180px,100%);margin:auto}
-    .hero{display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:64px;background:radial-gradient(circle at 80% 30%,rgba(176,184,221,.15),transparent 35%),var(--plum)}
-    .eyebrow{font:500 13px DM Mono;color:var(--gold);letter-spacing:.13em;text-transform:uppercase}.hero h1,.section-title{font-family:"Space Grotesk",sans-serif;letter-spacing:-.055em;line-height:.95}.hero h1{font-size:clamp(3.7rem,8vw,7.5rem);margin:16px 0 24px;max-width:800px}.hero h1 span{color:var(--peri)}.lede{font-size:clamp(1.05rem,2vw,1.3rem);max-width:620px;color:#ddd7e6}.chips{display:flex;flex-wrap:wrap;gap:9px;margin:28px 0}.chip{font:13px DM Mono;padding:8px 11px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:var(--cream)}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 18px;border-radius:13px;font-weight:600;border:1px solid rgba(255,255,255,.18);transition:.25s}.btn.primary{background:var(--cream);color:var(--ink)}.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
-    .desktop{position:relative;min-height:610px}.window{position:absolute;border:1px solid rgba(28,22,38,.35);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);user-select:none;transition:box-shadow .2s}.window.dragging{box-shadow:0 30px 80px rgba(0,0,0,.38)}.bar{height:42px;display:flex;align-items:center;gap:7px;padding:0 14px;background:var(--lav);color:var(--ink);font:12px DM Mono;cursor:grab}.dot{width:9px;height:9px;border-radius:50%;background:var(--iris)}.dot:nth-child(2){background:var(--gold)}.dot:nth-child(3){background:#9aaf94}.bar span:last-child{margin-left:auto}
-    .portrait-window{width:74%;right:0;top:0;background:var(--cream)}.portrait{height:420px;padding:18px;display:grid;place-items:center}.portrait img{width:100%;height:100%;object-fit:contain;object-position:center;border-radius:12px;background:#d8d1de}.fallback{display:none;place-items:center;width:100%;height:100%;border-radius:12px;background:linear-gradient(145deg,var(--peri),var(--lav));color:var(--plum);font:700 5rem "Space Grotesk"}
-    .code-window{width:67%;left:0;bottom:5px;background:#1f1b2a;transform:rotate(-2deg)}pre{margin:0;padding:22px;color:#ece8f3;font:13px/1.8 DM Mono;white-space:pre-wrap}.key{color:#cbbcf0}.str{color:#e6bd88}
-    .botanical{position:absolute;left:-32px;bottom:16px;width:105px;height:190px;opacity:.9}.vase{position:absolute;bottom:0;left:24px;width:60px;height:72px;border-radius:18px 18px 30px 30px;background:linear-gradient(120deg,var(--cream),#cfc4d4);box-shadow:0 12px 30px rgba(0,0,0,.2)}.stem{position:absolute;bottom:65px;left:52px;width:2px;height:105px;background:#9ea892;transform-origin:bottom}.stem:after{content:"✦";position:absolute;top:-15px;left:-7px;color:white;font-size:18px}.s1{transform:rotate(-20deg)}.s2{height:125px;transform:rotate(5deg)}.s3{height:110px;transform:rotate(22deg)}
-    .light{background:var(--peri);color:var(--ink)}.section-title{font-size:clamp(3rem,6vw,6rem);margin:0 0 42px;max-width:900px}.intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px}.big-line{font:600 clamp(2rem,4vw,4rem)/1.05 "Space Grotesk";letter-spacing:-.04em}.info-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.info-card{padding:24px;background:rgba(246,237,228,.7);border:1px solid rgba(47,41,64,.15);border-radius:18px;transition:.25s}.info-card:hover{transform:translateY(-5px);background:var(--cream)}.info-card strong{display:block;font:600 20px "Space Grotesk";margin-bottom:7px}
-    .projects{background:var(--cream);color:var(--ink)}.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.project-card{position:relative;min-height:360px;padding:32px;border-radius:var(--radius);border:1px solid rgba(47,41,64,.16);background:#fffaf5;transform-style:preserve-3d;transition:transform .15s ease,box-shadow .2s}.project-card:hover{box-shadow:var(--shadow)}.project-card .number{font:14px DM Mono;color:var(--iris)}.project-card h3{font:600 clamp(2rem,4vw,3.7rem)/1 "Space Grotesk";letter-spacing:-.04em;margin:70px 0 18px}.project-card p{max-width:480px;color:#575064}.tags{position:absolute;bottom:26px;display:flex;gap:8px;flex-wrap:wrap}.tags span{font:12px DM Mono;background:var(--lav);padding:7px 10px;border-radius:999px}.process{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:18px}.step{padding:26px;background:var(--plum);color:white}.step:first-child{border-radius:18px 0 0 18px}.step:last-child{border-radius:0 18px 18px 0}.step b{display:block;font:600 22px "Space Grotesk";margin-top:12px}
-    .timeline{background:var(--slate)}.timeline-list{border-left:1px solid rgba(255,255,255,.25);margin-left:12px}.time-item{position:relative;padding:0 0 45px 38px}.time-item:before{content:"";position:absolute;left:-7px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 7px rgba(207,162,107,.13)}.time-item small{font:13px DM Mono;color:var(--gold)}.time-item h3{font:600 28px "Space Grotesk";margin:5px 0}.time-item p{color:#d7d3de;max-width:720px}
-    .library{background:#201c2b}.shelf{display:flex;align-items:flex-end;gap:12px;min-height:330px;padding:50px 30px 22px;border-bottom:14px solid #b88c5e;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}.book{border:0;cursor:pointer;color:var(--ink);width:105px;padding:17px 11px;border-radius:6px 12px 4px 4px;writing-mode:vertical-rl;transform:rotate(180deg);font:600 15px "Space Grotesk";transition:.25s;box-shadow:5px 0 0 rgba(0,0,0,.13)}.book:nth-child(1){height:245px;background:var(--peri)}.book:nth-child(2){height:290px;background:var(--cream)}.book:nth-child(3){height:225px;background:var(--gold)}.book:nth-child(4){height:275px;background:var(--lav)}.book:hover,.book:focus{transform:rotate(180deg) translateY(14px);outline:3px solid white;outline-offset:3px}.reader{margin-top:25px;padding:30px;border:1px solid rgba(255,255,255,.15);border-radius:18px;background:rgba(255,255,255,.05)}.reader h3{font:600 30px "Space Grotesk";margin:0 0 8px}.reader p{color:#dcd6e5;max-width:800px}.star{position:absolute;right:8vw;top:125px;border:0;background:none;color:var(--gold);font-size:28px;cursor:pointer;animation:pulse 2.4s infinite}@keyframes pulse{50%{transform:scale(1.2);filter:drop-shadow(0 0 10px var(--gold))}}
-    .contact{min-height:72vh;background:var(--cream);color:var(--ink);display:grid;place-items:center;text-align:center}.contact .section-title{margin-inline:auto}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.contact-links a{padding:13px 18px;border:1px solid rgba(47,41,64,.2);border-radius:13px}.contact-links a:hover{background:var(--plum);color:white}footer{font:12px DM Mono;margin-top:55px;color:#665e6f}
-    .reveal{opacity:0;transform:translateY(30px);transition:.8s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:850px){nav{top:10px}.nav-links{display:none}.hero{grid-template-columns:1fr;padding-top:110px}.desktop{min-height:560px;margin-top:10px}.portrait-window{width:90%}.portrait{height:390px}.code-window{width:82%}.intro-grid,.project-grid{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.step:first-child{border-radius:18px 0 0 0}.step:last-child{border-radius:0 0 18px 0}.shelf{overflow-x:auto}.aura{display:none}}
-    @media(max-width:520px){section{padding-inline:20px}.hero h1{font-size:3.35rem}.desktop{min-height:500px}.portrait-window{width:100%}.portrait{height:350px}.code-window{width:94%;bottom:0}.botanical{display:none}.process{grid-template-columns:1fr}.step,.step:first-child,.step:last-child{border-radius:10px}.book{min-width:78px;width:78px}.section-title{font-size:3rem}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-  <div id="progress"></div><div class="aura" aria-hidden="true"></div>
-  <nav><a class="brand" href="#home">NNZ://portfolio</a><div class="nav-links"><a href="#home">Home</a><a href="#person">Person</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#thoughts">Thoughts</a></div><button class="sound" id="sound" aria-pressed="false">◌ brown noise</button></nav>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-aura" id="cursorAura" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Go home"><span class="orb"></span>NNZ / PERSONAL SPACE</a>
+    <nav aria-label="Main navigation">
+      <a href="#story">Story</a><a href="#work">Work</a><a href="#thoughts">Library</a><a href="recipes.html">Recipes</a>
+    </nav>
+    <button class="sound-button" id="soundToggle" aria-pressed="false"><span>◌</span> Brown noise</button>
+  </header>
 
-  <section class="hero" id="home"><div class="wrap" style="display:contents">
-    <div class="reveal"><p class="eyebrow">Full-Stack Developer · Social Impact Builder</p><h1>Nusaiba<br><span>Nusrat Zaman.</span></h1><p class="lede">Discovering myself through solving social problems—using technology, curiosity and responsibility to turn difficult questions into useful work.</p><div class="chips"><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Research</span><span class="chip">Leadership</span></div><div class="actions"><a class="btn primary" href="#projects">Explore my work</a><a class="btn" href="#person">Meet the person</a></div></div>
-    <div class="desktop reveal"><div class="botanical" aria-hidden="true"><i class="stem s1"></i><i class="stem s2"></i><i class="stem s3"></i><i class="vase"></i></div><article class="window portrait-window" data-drag><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>portrait.jpg</span></div><div class="portrait"><img src="profile.jpg" alt="Portrait of Nusaiba Nusrat Zaman" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="fallback">NNZ</div></div></article><article class="window code-window" data-drag><div class="bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>identity.js</span></div><pre><span class="key">const</span> nusaiba = {
-  role: <span class="str">"developer"</span>,
-  instinct: <span class="str">"problem-solver"</span>,
-  guidedBy: [<span class="str">"faith"</span>, <span class="str">"service"</span>],
-  location: <span class="str">"Dhaka, Bangladesh"</span>
-};</pre></article></div>
-  </div></section>
+  <main id="home">
+    <section class="hero section">
+      <aside class="desktop-rail" aria-label="Quick navigation">
+        <a href="#work"><span class="folder-icon">⌑</span>Projects</a>
+        <a href="#story"><span class="folder-icon">⌑</span>About</a>
+        <a href="#thoughts"><span class="folder-icon">⌑</span>Notes</a>
+      </aside>
 
-  <section class="light" id="person"><div class="wrap"><p class="eyebrow" style="color:#55466f">01 · The person behind the code</p><h2 class="section-title reveal">Developer by skill.<br>Problem-solver by instinct.</h2><div class="intro-grid"><p class="big-line reveal">I care about the human story behind every technical problem.</p><div class="info-cards reveal"><article class="info-card"><strong>Education</strong>Computer Science at BRAC University, with curiosity extending far beyond the classroom.</article><article class="info-card"><strong>Human behaviour</strong>Understanding people before deciding what should be built for them.</article><article class="info-card"><strong>Faith & responsibility</strong>Letting purpose, integrity and service guide ambition.</article><article class="info-card"><strong>Leadership</strong>Creating space for people to contribute, question and grow.</article></div></div></div></section>
+      <div class="hero-stage">
+        <img class="left-vase" src="white-flower-vase.png" alt="" aria-hidden="true">
+        <article class="window intro-window draggable-window" data-drag-label="Drag this window">
+          <div class="window-bar"><span class="dots"><i></i><i></i><i></i></span><span>hello_nusaiba.md</span><span>✦</span></div>
+          <div class="intro-body">
+            <div class="hero-copy">
+              <p class="eyebrow">FULL-STACK DEVELOPER · SOCIAL IMPACT BUILDER</p>
+              <h1>Nusaiba<br>Nusrat Zaman.</h1>
+              <p class="hero-belief">Discovering myself through <em>solving social problems.</em></p>
+              <p class="lead">Computer Science student at BRAC University. I question systems, study people and build purposeful technology around problems that matter.</p>
+              <div class="quick-skills"><span>JavaScript</span><span>Next.js</span><span>PHP</span><span>MySQL</span><span>Research</span><span>Leadership</span></div>
+              <div class="hero-actions"><a class="primary" href="#work">Explore my work <span>→</span></a><a class="text-link" href="#story">Read my story</a></div>
+            </div>
+            <figure class="portrait-card">
+              <div class="portrait-frame"><img src="assets/nusaiba-profile.jpg" alt="Portrait of Nusaiba Nusrat Zaman"></div>
+              <figcaption><span>PROFILE_01.JPG</span><strong>Builder · Researcher · Leader</strong></figcaption>
+            </figure>
+          </div>
+          <div class="window-foot"><span>Based in Dhaka, Bangladesh</span><span>Scroll to enter my world ↓</span></div>
+        </article>
 
-  <section class="projects" id="projects"><div class="wrap"><p class="eyebrow">02 · Selected work</p><h2 class="section-title reveal">Problems worth<br>working on.</h2><div class="project-grid"><article class="project-card reveal"><span class="number">PROJECT 01 · SDG 4</span><h3>Bujhi</h3><p>An education initiative helping Bangladeshi students move beyond memorisation through practical, interactive and flexible ways of understanding.</p><div class="tags"><span>EdTech</span><span>Research</span><span>Learning design</span></div></article><article class="project-card reveal"><span class="number">PROJECT 02 · HEALTHCARE</span><h3>Healthcare Central</h3><p>A healthcare information and appointment platform designed to make reliable doctor, schedule and service information easier to find.</p><div class="tags"><span>Full-stack</span><span>PHP</span><span>MySQL</span></div></article><div class="process reveal"><div class="step">01<b>Notice</b></div><div class="step">02<b>Question</b></div><div class="step">03<b>Build</b></div><div class="step">04<b>Learn</b></div></div></div></div></section>
+        <article class="window code-window draggable-window" aria-label="Developer profile" data-drag-label="Drag this window">
+          <div class="window-bar dark"><span class="dots"><i></i><i></i><i></i></span><span>identity.ts</span><span></span></div>
+          <pre><span class="muted">01</span>  <span class="violet">const</span> nusaiba = {
+<span class="muted">02</span>    role: <span class="rose">"full-stack developer"</span>,
+<span class="muted">03</span>    mind: <span class="rose">"curious"</span>,
+<span class="muted">04</span>    compass: <span class="rose">"faith & purpose"</span>,
+<span class="muted">05</span>    currentlyBuilding: <span class="gold">"Bujhi"</span>
+<span class="muted">06</span>  };</pre>
+        </article>
 
-  <section class="timeline" id="journey"><div class="wrap"><p class="eyebrow">03 · Leadership & learning</p><h2 class="section-title reveal">Still becoming.</h2><div class="timeline-list reveal"><article class="time-item"><small>LEADERSHIP</small><h3>Millennium Fellow & Campus Director</h3><p>Supporting a community of young changemakers while developing an education initiative connected to SDG 4.</p></article><article class="time-item"><small>EDUCATION</small><h3>Computer Science · BRAC University</h3><p>Building technical foundations while exploring how technology interacts with education, inequality and everyday life.</p></article><article class="time-item"><small>PRACTICE</small><h3>Full-stack development journey</h3><p>Learning by turning ideas into working systems—and treating every failed attempt as evidence, not defeat.</p></article></div></div></section>
+        <button class="secret-star" id="secretStar" aria-label="A hidden surprise">✦</button>
+        <div class="secret-note" id="secretNote" role="status">Curiosity found this. Keep looking closer.</div>
+      </div>
+    </section>
 
-  <section class="library" id="thoughts"><button class="star" id="star" aria-label="Open a hidden note">✦</button><div class="wrap"><p class="eyebrow">04 · Thoughts & inner library</p><h2 class="section-title reveal">Ideas I return to.</h2><div class="shelf reveal" role="listbox" aria-label="Reflection bookshelf"><button class="book" data-title="Problem before product" data-text="A solution becomes meaningful only after we understand the people, systems and assumptions surrounding the problem.">Problem before product</button><button class="book" data-title="What does it mean to understand?" data-text="Understanding is not repeating the correct words. It is being able to connect, question, test and explain an idea in your own way.">What does it mean to understand?</button><button class="book" data-title="Leadership without performance" data-text="Leadership is less about appearing certain and more about creating the conditions for others to think, speak and contribute honestly.">Leadership without performance</button><button class="book" data-title="Ambition, faith and service" data-text="Ambition needs direction. Faith reminds me that achievement carries responsibility, and useful work should leave something better than I found it.">Ambition, faith and service</button></div><article class="reader reveal" aria-live="polite"><h3 id="readerTitle">Choose a book</h3><p id="readerText">Select a spine to open a reflection. Use the left and right arrow keys to move across the shelf.</p></article></div></section>
+    <section class="manifesto section" id="story">
+      <div class="section-label"><span>01</span> THE PERSON BEHIND THE CODE</div>
+      <div class="manifesto-grid">
+        <h2>Developer by skill.<br>Problem-solver by instinct.</h2>
+        <div>
+          <p>I am studying Computer Science at BRAC University, but my interests rarely stay inside one discipline. Education, human behaviour, leadership, inequality and faith all shape the questions I choose to explore.</p>
+          <p>For me, meaningful problem-solving starts with listening. Code comes later—as one possible tool, not the entire answer.</p>
+          <button class="note-button" data-note="faith">Open a guiding principle ↗</button>
+          <div class="principle-card" id="faith">
+            <button aria-label="Close reflection">×</button>
+            <span>SELECTED REFLECTION / 001</span>
+            <blockquote>Faith gives direction to ambition: what I build should be useful, responsible and grounded in service rather than attention alone.</blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="contact" id="contact"><div class="wrap reveal"><p class="eyebrow">05 · Find me</p><h2 class="section-title">Let’s build something that matters.</h2><div class="contact-links"><a href="https://github.com/CodeArtisanNNZ" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:nusaibanusratzaman@gmail.com">Email ↗</a><a href="#home">Back to the top ↑</a></div><footer>nusaibanusratzaman.me · Dhaka, Bangladesh</footer></div></section>
+    <section class="work section" id="work">
+      <div class="section-label"><span>02</span> PROBLEMS I’M WORKING ON</div>
+      <div class="project-grid">
+        <article class="project-card featured tilt-card">
+          <div class="project-top"><span>IN PROGRESS · SDG 4</span><span class="project-number">01</span></div>
+          <h3>Bujhi</h3>
+          <p class="project-thesis">Less memorizing.<br>More understanding.</p>
+          <p>An education initiative exploring how Bangladesh’s curriculum can become more understandable through visual explanations, practical examples and different ways of teaching.</p>
+          <div class="tags"><span>EdTech</span><span>Research</span><span>Next.js</span><span>Social impact</span></div>
+          <a href="https://bujhi.page" target="_blank" rel="noreferrer">Visit Bujhi <span>↗</span></a>
+        </article>
+        <article class="project-card tilt-card">
+          <div class="project-top"><span>ACADEMIC BUILD</span><span class="project-number">02</span></div>
+          <h3>Healthcare Central</h3>
+          <p>A healthcare search and appointment platform connecting patients with doctors, medicine information, caregivers and ambulance services.</p>
+          <div class="tags"><span>PHP</span><span>MySQL</span><span>Full stack</span></div>
+          <a href="https://github.com/CodeArtisanNNZ/healthcare-system" target="_blank" rel="noreferrer">View repository <span>↗</span></a>
+        </article>
+        <article class="project-card idea-card tilt-card">
+          <span class="tiny">MY PROCESS</span>
+          <ol><li><b>Notice</b><span>What feels unnecessarily difficult?</span></li><li><b>Question</b><span>Who experiences the problem—and why?</span></li><li><b>Build</b><span>What is the smallest useful intervention?</span></li><li><b>Learn</b><span>What did reality prove wrong?</span></li></ol>
+        </article>
+      </div>
+    </section>
 
-  <script>
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const progress=document.querySelector('#progress');
-    const sections=[...document.querySelectorAll('section[id]')];
-    const links=[...document.querySelectorAll('.nav-links a')];
-    addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(scrollY/max*100)+'%';let current='home';sections.forEach(s=>{if(scrollY>=s.offsetTop-innerHeight*.42)current=s.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))},{passive:true});
-    const reveal=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));
-    if(!reduce&&innerWidth>850){const aura=document.querySelector('.aura');addEventListener('pointermove',e=>{aura.style.left=e.clientX+'px';aura.style.top=e.clientY+'px'});document.querySelectorAll('.project-card').forEach(card=>{card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(800px) rotateX(${-y*5}deg) rotateY(${x*6}deg)`});card.addEventListener('pointerleave',()=>card.style.transform='')});document.querySelectorAll('[data-drag]').forEach(win=>{const initial={left:win.style.left,top:win.style.top,transform:win.style.transform};let start=null;win.querySelector('.bar').addEventListener('pointerdown',e=>{start={x:e.clientX,y:e.clientY,l:win.offsetLeft,t:win.offsetTop};win.classList.add('dragging');e.currentTarget.setPointerCapture(e.pointerId)});win.querySelector('.bar').addEventListener('pointermove',e=>{if(!start)return;win.style.left=start.l+e.clientX-start.x+'px';win.style.top=start.t+e.clientY-start.y+'px';win.style.right='auto';win.style.bottom='auto'});win.querySelector('.bar').addEventListener('pointerup',()=>{start=null;win.classList.remove('dragging')});win.addEventListener('dblclick',()=>{win.removeAttribute('style')})})}
-    const books=[...document.querySelectorAll('.book')],title=document.querySelector('#readerTitle'),text=document.querySelector('#readerText');function openBook(b){title.textContent=b.dataset.title;text.textContent=b.dataset.text;b.focus()}books.forEach((b,i)=>{b.addEventListener('click',()=>openBook(b));b.addEventListener('keydown',e=>{if(e.key==='ArrowRight')openBook(books[(i+1)%books.length]);if(e.key==='ArrowLeft')openBook(books[(i-1+books.length)%books.length])})});
-    document.querySelector('#star').addEventListener('click',()=>alert('A quiet reminder: meaningful work can begin with one honest question.'));
-    let audio,noise,gain,filter,on=false;document.querySelector('#sound').addEventListener('click',async e=>{if(!audio){audio=new(window.AudioContext||window.webkitAudioContext)();const buffer=audio.createBuffer(1,audio.sampleRate*4,audio.sampleRate),data=buffer.getChannelData(0);let last=0;for(let i=0;i<data.length;i++){const white=Math.random()*2-1;last=(last+.02*white)/1.02;data[i]=last*3.2}noise=audio.createBufferSource();noise.buffer=buffer;noise.loop=true;filter=audio.createBiquadFilter();filter.type='lowpass';filter.frequency.value=650;filter.Q.value=.35;gain=audio.createGain();gain.gain.value=0;noise.connect(filter).connect(gain).connect(audio.destination);noise.start()}if(audio.state==='suspended')await audio.resume();on=!on;gain.gain.cancelScheduledValues(audio.currentTime);gain.gain.setTargetAtTime(on ? .09 : 0,audio.currentTime,on ? .8 : .35);e.currentTarget.textContent=on?'◉ brown noise':'◌ brown noise';e.currentTarget.setAttribute('aria-pressed',on)});
-  </script>
+    <section class="journey section">
+      <div class="section-label"><span>03</span> LEADERSHIP & LEARNING</div>
+      <div class="timeline">
+        <article><time>2026</time><div><h3>Millennium Fellow & Campus Director</h3><p>Leading BRAC University Cohort A while developing Bujhi as an SDG 4 initiative.</p></div></article>
+        <article><time>2024—28</time><div><h3>B.Sc. in Computer Science</h3><p>BRAC University · Learning to connect technical foundations with real human needs.</p></div></article>
+        <article><time>ONGOING</time><div><h3>Full-stack development</h3><p>HTML, CSS, JavaScript, PHP, MySQL, Next.js, Git and GitHub.</p></div></article>
+      </div>
+    </section>
+
+    <section class="books section" id="thoughts">
+      <div class="section-label"><span>04</span> MY INNER LIBRARY</div>
+      <div class="books-intro"><h2>Open a part of my world.</h2><p>Projects, questions, memories and things I am still learning. Choose a volume.</p></div>
+      <div class="shelf personality-shelf" aria-label="Nusaiba's personal bookshelf">
+        <button class="book b1" data-book="building"><span>01</span>Building<small>projects & process</small></button>
+        <button class="book b2" data-book="understanding"><span>02</span>Understanding<small>faith & learning</small></button>
+        <button class="book b3" data-book="remembering"><span>03</span>Remembering<small>history & home</small></button>
+        <button class="book b4 bangla-book" data-book="reciting" lang="bn"><span>০৪</span>আবৃত্তি<small>শব্দ ও অনুভব</small></button>
+        <button class="book b5" data-book="reading"><span>05</span>Reading<small>books & ideas</small></button>
+        <button class="book b6" data-book="making"><span>06</span>Making<small>craft & curiosity</small></button>
+        <a class="book b7 cooking-book" href="recipes.html"><span>07</span>Cooking<small>recipes & memories</small></a>
+        <button class="book b8" data-book="becoming"><span>08</span>Becoming<small>lessons & small joys</small></button>
+      </div>
+      <div class="book-reader" id="bookReader" aria-live="polite">
+        <button id="closeBook" aria-label="Close note">×</button>
+        <span id="bookIndex">VOLUME / 01</span>
+        <h3 id="bookTitle">Building</h3>
+        <p id="bookText">I build after I listen. This volume holds the projects, wrong turns and small decisions behind the work—not only the polished outcome.</p>
+        <a class="reader-link" id="readerLink" href="#work">Explore this volume →</a>
+      </div>
+    </section>
+
+    <section class="contact section">
+      <p class="eyebrow">END OF FILE—FOR NOW.</p>
+      <h2>Still curious?</h2>
+      <p>My work is unfinished by design. I’m learning, questioning and building in public.</p>
+      <div class="contact-links"><a href="https://github.com/CodeArtisanNNZ" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#home">Back to top ↑</a></div>
+      <p class="visitor-line" id="visitorLine" hidden><span id="visitorCount">—</span> curious minds have visited</p>
+      <p class="domain">nusaibanusratzaman.me</p>
+    </section>
+  </main>
+
+  <div class="sound-panel" id="soundPanel">
+    <span>AMBIENT SPACE</span>
+    <button data-sound="brown">Brown noise</button><button data-sound="rain">Soft rain</button><button data-sound="wood">Wood chime</button>
+    <label class="volume-control">Volume <input id="soundVolume" type="range" min="1" max="8" value="3" aria-label="Ambient sound volume"></label>
+  </div>
+  <script src="visitor-counter.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
