@@ -48,3 +48,11 @@ body{background:radial-gradient(circle at 76% 8%,#686f9f 0,#444970 38%,#25243a 1
 
 .fairy-dust{position:fixed;z-index:9999;left:0;top:0;width:var(--dust-size);height:var(--dust-size);border-radius:50%;background:var(--dust-color);box-shadow:0 0 7px var(--dust-color),0 0 13px var(--dust-color);pointer-events:none;animation:fairyFloat .62s ease-out forwards}.fairy-burst{animation-duration:.82s}@keyframes fairyFloat{0%{opacity:1;transform:translate(-50%,-50%) scale(1.25)}100%{opacity:0;transform:translate(calc(-50% + var(--dust-x)),calc(-50% + var(--dust-y))) scale(.15)}}@media(prefers-reduced-motion:reduce){.fairy-dust{display:none!important}}
 .hero{min-height:auto;padding-bottom:46px}.hero-stage{gap:0}.code-window{margin-top:18px}.secret-star{bottom:30px}
+.secret-note {
+  background: #f6ede4;
+  color: #393653;
+  border: 1px solid rgba(207, 162, 107, 0.55);
+  box-shadow: 0 14px 35px rgba(10, 8, 24, 0.3);
+  max-width: 320px;
+  line-height: 1.6;
+}
