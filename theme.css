@@ -56,3 +56,14 @@ body{background:radial-gradient(circle at 76% 8%,#686f9f 0,#444970 38%,#25243a 1
   max-width: 320px;
   line-height: 1.6;
 }
+/* Keep the process card organized below all three projects */
+.idea-card {
+  grid-column: 1 / -1;
+  min-height: auto;
+}
+
+@media (max-width: 900px) {
+  .idea-card {
+    grid-column: auto;
+  }
+}
