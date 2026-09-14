@@ -12,6 +12,22 @@ const progress=document.getElementById("scrollProgress");
 const updateProgress=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform=`scaleX(${max>0?scrollY/max:0})`};
 addEventListener("scroll",updateProgress,{passive:true});updateProgress();
 
+const projectGrid=document.querySelector("#work .project-grid");
+if(projectGrid&&!projectGrid.querySelector('[data-project="aware-minds"]')){
+  const awareMinds=document.createElement("article");
+  awareMinds.className="project-card";
+  awareMinds.dataset.project="aware-minds";
+  awareMinds.innerHTML=`
+    <div class="project-top"><span>IN DEVELOPMENT · DEVELOPER TOOL</span><span class="project-number">05</span></div>
+    <h3>Aware Minds</h3>
+    <p class="project-thesis">Edit. Review.<br>Push with clarity.</p>
+    <p>A local developer workspace that makes project and Git management easier through a guided visual workflow for connecting repositories, editing files, reviewing changes and pushing to GitHub.</p>
+    <div class="tags"><span>Developer Tools</span><span>Git</span><span>Local-first</span><span>SQLite</span></div>
+    <a href="https://github.com/CodeArtisanNNZ/aware-minds" target="_blank" rel="noopener noreferrer">Explore Aware Minds <span>↗</span></a>`;
+  const processCard=projectGrid.querySelector(".idea-card");
+  processCard?projectGrid.insertBefore(awareMinds,processCard):projectGrid.appendChild(awareMinds);
+}
+
 const revealItems=document.querySelectorAll(".section-label,.manifesto-grid>*,.project-card,.timeline article,.books-intro,.shelf,.contact>*");
 if(reducedMotion){revealItems.forEach(el=>el.classList.add("revealed"))}else{
   revealItems.forEach(el=>el.classList.add("reveal-item"));
