@@ -176,3 +176,19 @@ body{background:radial-gradient(circle at 76% 8%,#686f9f 0,#444970 38%,#25243a 1
   .section-label::after{transform:scaleX(1);animation:none!important}
   .section-label.revealed span{animation:none!important}
 }
+
+/* Code window diamond marker */
+.code-titlebar{
+  grid-template-columns:34px 1fr 30px;
+}
+
+.diamond-mark{
+  width:14px;
+  height:14px;
+  display:inline-block;
+  justify-self:start;
+  transform:rotate(45deg);
+  border-radius:2px;
+  background:linear-gradient(135deg,#f3d27a 0%,#cfa26b 100%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.12),0 6px 14px rgba(0,0,0,.22);
+}
