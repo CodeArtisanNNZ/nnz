@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="theme.css?v=section-label-3">
+  <link rel="stylesheet" href="work-scrapbook.css?v=1">
 </head>
 <body>
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
@@ -93,58 +94,95 @@
       </div>
     </section>
 
-    <section class="work section" id="work">
+
+    <section class="work section scrapbook-work" id="work" aria-labelledby="selected-work-title">
       <div class="section-label"><span>02</span> PROBLEMS I’M WORKING ON</div>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-top"><span>IN PROGRESS · SDG 4</span><span class="project-number">01</span></div>
-          <h3>Bujhi</h3>
-          <p class="project-thesis">Less memorizing.<br>More understanding.</p>
-          <p>An EdTech project exploring clearer, more practical ways to teach Bangladesh’s curriculum.</p>
-          <div class="tags"><span>EdTech</span><span>Research</span><span>Next.js</span><span>Social impact</span></div>
-          <a href="https://www.bujhi.page/" target="_blank" rel="noreferrer">Visit Bujhi <span>↗</span></a>
+      <div class="work-heading">
+        <p class="work-margin-note" aria-hidden="true">Things I've built<br>(and still building) <span>↘</span></p>
+        <div class="work-heading-copy">
+          <h2 id="selected-work-title">Selected work<span class="work-sunburst" aria-hidden="true">✳</span></h2>
+          <p>IDEAS &nbsp;·&nbsp; CODE &nbsp;·&nbsp; IMPACT</p>
+        </div>
+        <a class="work-see-all" href="#more-work">More experiments <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="project-grid scrapbook-grid" aria-label="Featured projects">
+        <article class="project-card scrap-card scrap-bujhi" aria-labelledby="work-bujhi-title">
+          <div class="paper-punch" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span class="scrap-tape tape-purple" aria-hidden="true"></span>
+          <div class="scrap-topline"><span class="scrap-index">01</span><span>EDTECH · SDG 4</span></div>
+          <div class="scrap-copy">
+            <h3 id="work-bujhi-title">Bujhi</h3>
+            <p class="scrap-tagline">Less memorizing.<br>More understanding.</p>
+            <p class="scrap-description">Learning that goes beyond the textbook.</p>
+            <a class="scrap-open" href="https://www.bujhi.page/" target="_blank" rel="noopener noreferrer" aria-label="Explore Bujhi (opens in new tab)">Explore project <span aria-hidden="true">→</span></a>
+          </div>
+          <img class="scrap-art" src="assets/work-bujhi.svg" alt="" loading="lazy" decoding="async">
+          <span class="scrap-scribble scribble-bujhi" aria-hidden="true">ideas for<br>brighter learners</span>
         </article>
 
-        <article class="project-card">
-          <div class="project-top"><span>ACADEMIC BUILD</span><span class="project-number">02</span></div>
-          <h3>Healthcare Central</h3>
-          <p class="project-thesis">Care, easier<br>to find.</p>
-          <p>Find doctors, medicines, caregivers and ambulance services in one place.</p>
-          <div class="tags"><span>PHP</span><span>MySQL</span><span>Full stack</span></div>
-          <a href="https://healthcare-system-m5q5.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Healthcare Central <span>↗</span></a>
+        <article class="project-card scrap-card scrap-health" aria-labelledby="work-health-title">
+          <span class="scrap-tape tape-blue" aria-hidden="true"></span>
+          <div class="scrap-topline"><span class="scrap-index">02</span><span>ACADEMIC BUILD · HEALTHTECH</span></div>
+          <div class="scrap-copy">
+            <h3 id="work-health-title">Healthcare<br>Central</h3>
+            <p class="scrap-tagline">Care, easier to find.</p>
+            <p class="scrap-description">Find doctors, medicines, caregivers and emergency services.</p>
+            <a class="scrap-open" href="https://healthcare-system-m5q5.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Explore Healthcare Central (opens in new tab)">Explore project <span aria-hidden="true">→</span></a>
+          </div>
+          <img class="scrap-art" src="assets/work-health.svg" alt="" loading="lazy" decoding="async">
+          <span class="scrap-doodle health-heart" aria-hidden="true">♡</span>
         </article>
 
-        <article class="project-card">
-          <div class="project-top"><span>IN DEVELOPMENT · AGRITECH</span><span class="project-number">03</span></div>
-          <h3>Kishan Bari</h3>
-          <p class="project-thesis">Understand the soil.<br>Grow with confidence.</p>
-          <p>A Bangla-first soil guidance tool for simple, practical farming recommendations.</p>
-          <div class="tags"><span>AgriTech</span><span>AI/ML</span><span>FastAPI</span><span>Bangla-first</span></div>
-          <a href="https://kishan-bari.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Kishan Bari <span>↗</span></a>
+        <article class="project-card scrap-card scrap-comet" aria-labelledby="work-comet-title">
+          <div class="scrap-topline"><span class="scrap-index">03</span><span>DEVELOPER WORKSPACE</span></div>
+          <div class="scrap-copy">
+            <h3 id="work-comet-title">First Comet</h3>
+            <p class="scrap-tagline">Take your project<br>from first step to life.</p>
+            <p class="scrap-description">A warm workspace to plan, build and learn.</p>
+            <a class="scrap-open" href="https://firstcomet.awerminds.tech/" target="_blank" rel="noopener noreferrer" aria-label="Explore First Comet (opens in new tab)">Explore project <span aria-hidden="true">→</span></a>
+          </div>
+          <img class="scrap-art" src="assets/work-comet.svg" alt="" loading="lazy" decoding="async">
+          <span class="scrap-comet-star" aria-hidden="true">✧</span>
         </article>
 
-        <article class="project-card" data-project="first-comet">
-          <div class="project-top"><span>IN DEVELOPMENT · DEVELOPER WORKSPACE</span><span class="project-number">04</span></div>
-          <h3>First Comet</h3>
-          <p class="project-thesis">First step.<br>Bring it to life.</p>
-          <p>A visual workspace that helps beginners plan, build, understand and publish software projects.</p>
-          <div class="tags"><span>Developer Tools</span><span>Git</span><span>Learning</span><span>Visual Workspace</span></div>
-          <a href="https://firstcomet.awerminds.tech/" target="_blank" rel="noopener noreferrer">Visit First Comet <span>↗</span></a>
+        <article class="project-card scrap-card scrap-owl" aria-labelledby="work-owl-title">
+          <span class="scrap-clip" aria-hidden="true"></span>
+          <div class="scrap-topline"><span class="scrap-index">04</span><span>COURSE COMMUNICATION</span></div>
+          <div class="scrap-copy">
+            <h3 id="work-owl-title">Owl Post</h3>
+            <p class="scrap-tagline">Your courses.<br>Your community. One place.</p>
+            <p class="scrap-description">A simpler home for announcements, resources and course channels.</p>
+            <a class="scrap-open" href="https://awerminds.tech/owlpost/" target="_blank" rel="noopener noreferrer" aria-label="Explore Owl Post (opens in new tab)">Explore project <span aria-hidden="true">→</span></a>
+          </div>
+          <img class="scrap-art" src="assets/work-owl.svg" alt="" loading="lazy" decoding="async">
+          <span class="scrap-airmail" aria-hidden="true">↗</span>
         </article>
 
-        <article class="project-card" data-project="lifehistory">
-          <div class="project-top"><span>IN DEVELOPMENT · VISUAL HISTORY</span><span class="project-number">05</span></div>
-          <h3>LifeHistory</h3>
-          <p class="project-thesis">Trace life.<br>Understand the story.</p>
-          <p>LifeHistory began with my little sister’s curiosity. She has always been fascinated by the story of life and the past—at just three or four, she had already memorized the names of countless dinosaurs. I built this page for her, hoping to gather as much as I could into one place where her questions could keep growing into new discoveries.</p>
-          <div class="tags"><span>Research</span><span>Human History</span><span>Evolution</span><span>Visual Archive</span></div>
-          <a href="https://lifehistory.nusaibanusratzaman.me" target="_blank" rel="noopener noreferrer">Visit LifeHistory <span>↗</span></a>
+        <article class="project-card scrap-card scrap-madam" aria-labelledby="work-madam-title">
+          <span class="scrap-tape tape-coral" aria-hidden="true"></span>
+          <div class="scrap-topline"><span class="scrap-index">05</span><span>WEB AGENCY</span></div>
+          <div class="scrap-copy">
+            <h3 id="work-madam-title">MadamWeb</h3>
+            <p class="scrap-tagline">Web solutions<br>for your ideas.</p>
+            <p class="scrap-description">Thoughtful websites for small businesses and meaningful brands.</p>
+            <a class="scrap-open" href="https://madamweb.awerminds.tech/" target="_blank" rel="noopener noreferrer" aria-label="Explore MadamWeb (opens in new tab)">Explore project <span aria-hidden="true">→</span></a>
+          </div>
+          <img class="scrap-art" src="assets/work-madam.svg" alt="" loading="lazy" decoding="async">
+          <span class="scrap-scribble scribble-madam" aria-hidden="true">ideas<br>to impact</span>
         </article>
+      </div>
 
-        <article class="project-card idea-card">
-          <span class="tiny">MY PROCESS</span>
-          <ol><li><b>Notice</b><span>What feels unnecessarily difficult?</span></li><li><b>Question</b><span>Who experiences the problem—and why?</span></li><li><b>Build</b><span>What is the smallest useful intervention?</span></li><li><b>Learn</b><span>What did reality prove wrong?</span></li></ol>
-        </article>
+      <div class="work-after" id="more-work">
+        <p class="work-after-note" aria-hidden="true">small projects,<br>big hopes ♡</p>
+        <div class="other-work">
+          <span class="other-work-label">ALSO EXPLORING</span>
+          <a href="https://kishan-bari.vercel.app/" target="_blank" rel="noopener noreferrer">Kishan Bari <small>AgriTech · Bangla-first soil guidance</small><span aria-hidden="true">↗</span></a>
+          <a href="https://lifehistory.nusaibanusratzaman.me" target="_blank" rel="noopener noreferrer">LifeHistory <small>Visual archive · Curiosity about life</small><span aria-hidden="true">↗</span></a>
+        </div>
+        <details class="work-process"><summary>How I approach a problem <span aria-hidden="true">↓</span></summary>
+          <ol><li><b>Notice.</b> What feels unnecessarily difficult?</li><li><b>Question.</b> Who experiences the problem—and why?</li><li><b>Build.</b> What is the smallest useful intervention?</li><li><b>Learn.</b> What did reality prove wrong?</li></ol>
+        </details>
       </div>
     </section>
 
