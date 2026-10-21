@@ -376,3 +376,16 @@
   .scrapbook-work .scrap-card .scrap-description{font-size:.68rem}
   .scrapbook-work .scrap-card .scrap-tagline{font-size:.83rem}
 }
+
+/* Compact phone cards must never let long copy cover the action link. */
+@media(max-width:690px){
+  .scrapbook-work .scrap-card .scrap-description{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+  }
+}
+@media(max-width:380px){
+  .scrapbook-work .scrap-card .scrap-description{-webkit-line-clamp:2}
+}
