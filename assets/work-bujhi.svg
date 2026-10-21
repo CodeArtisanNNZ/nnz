@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Illustrated Bujhi learning notebook">
+<defs><filter id="shadow" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#17132d" flood-opacity=".22"/></filter><filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="2" stitchTiles="stitch" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="gray"/><feComponentTransfer in="gray"><feFuncA type="linear" slope=".05"/></feComponentTransfer></filter></defs>
+<g transform="translate(75 26) rotate(-8 162 148)" filter="url(#shadow)">
+<rect x="35" y="20" width="255" height="307" rx="12" fill="#f0e7d7" stroke="#c9baa6" stroke-width="3"/>
+<path d="M65 46h200M65 72h200M65 98h200M65 124h200M65 150h200M65 176h200M65 202h200M65 228h200M65 254h200M65 280h200" stroke="#ceb9cf" stroke-width="1.4" opacity=".48"/>
+<path d="M66 28v283" stroke="#bb8faa" stroke-width="1.4" opacity=".8"/>
+<rect x="99" y="47" width="170" height="242" rx="12" fill="#4e3b78" stroke="#7760a2" stroke-width="3"/>
+<path d="M105 54h157v222H105z" fill="none" stroke="#aa99cd" opacity=".55"/>
+<path d="M113 56q70 17 142 0" fill="none" stroke="#8e76bb" stroke-width="2"/>
+<rect x="109" y="39" width="143" height="22" rx="2" fill="#e4cc9b" opacity=".5" transform="rotate(-2 109 39)"/>
+<text x="184" y="157" text-anchor="middle" font-size="57" font-family="serif" font-weight="700" fill="#fff5d9">বুঝি</text>
+<path d="M157 187c9 12 34 13 46 0" stroke="#f0ce86" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="159" cy="181" r="3" fill="#f0ce86"/><circle cx="204" cy="181" r="3" fill="#f0ce86"/>
+<path d="M125 232h114m-108 12h100m-92 12h90" stroke="#a692c5" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+</g>
+<g transform="translate(334 25) rotate(9)" filter="url(#shadow)">
+<rect width="120" height="95" rx="4" fill="#ffdda9"/>
+<text x="16" y="27" fill="#574362" font-size="14" font-family="cursive">ideas for</text><text x="16" y="48" fill="#574362" font-size="14" font-family="cursive">brighter</text><text x="16" y="68" fill="#574362" font-size="14" font-family="cursive">learners!</text>
+</g>
+<g transform="translate(384 200)"><path d="M-7 102C-8 57-22 31-14-5M-9 62Q20 50 21 17M-9 80Q-30 51-45 40" fill="none" stroke="#557e60" stroke-width="5" stroke-linecap="round"/><path d="M-11 39Q-41 9-51 19Q-40 47-11 39ZM13 36Q44 9 51 19Q39 42 13 36ZM-19 76Q-51 51-55 61Q-46 87-19 76Z" fill="#7b9d79" stroke="#55785e" stroke-width="2"/></g>
+<g fill="none" stroke="#8e70b0" stroke-width="3" stroke-linecap="round"><path d="M52 89l-15-14m29-5l-3-19m24 28l13-15"/><path d="M342 304q-18-10-31-1"/></g>
+<rect x="0" y="0" width="480" height="360" fill="#fff" filter="url(#paper)" opacity=".17"/>
+</svg>
