@@ -157,3 +157,18 @@
   .scrapbook-work .scrap-card,.scrapbook-work .scrap-open span,.scrapbook-work .scrap-comet-star,.work-see-all span{transition:none!important;animation:none!important}
   .scrapbook-work .scrap-card:hover{transform:none}
 }
+
+/* Explicit stack layers override the older .project-card > * selector. */
+.scrapbook-work .scrap-card > .scrap-topline{position:relative;z-index:6}
+.scrapbook-work .scrap-card > .scrap-copy{position:relative;z-index:4}
+.scrapbook-work .scrap-card > .scrap-art{position:absolute;z-index:2}
+.scrapbook-work .scrap-card > .scrap-open{position:absolute;z-index:8;left:25px;bottom:19px;top:auto;right:auto}
+.scrapbook-work .scrap-card > .scrap-tape,
+.scrapbook-work .scrap-card > .scrap-clip{position:absolute;z-index:9}
+.scrapbook-work .scrap-card > .paper-punch{position:absolute;z-index:9}
+.scrapbook-work .scrap-card > .scrap-scribble,
+.scrapbook-work .scrap-card > .scrap-doodle,
+.scrapbook-work .scrap-card > .scrap-comet-star{position:absolute;z-index:5}
+@media(max-width:650px){
+  .scrapbook-work .scrap-card > .scrap-open{left:20px;bottom:17px}
+}
