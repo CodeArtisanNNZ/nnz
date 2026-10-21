@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Healthcare Central stethoscope illustration">
+<defs><filter id="shadow" x="-35%" y="-35%" width="170%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#17132d" flood-opacity=".22"/></filter><filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="2" stitchTiles="stitch" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="gray"/><feComponentTransfer in="gray"><feFuncA type="linear" slope=".05"/></feComponentTransfer></filter></defs>
+<g filter="url(#shadow)" transform="translate(38 19) rotate(5 185 154)">
+<rect x="73" y="44" width="315" height="247" rx="24" fill="#f3eee7" stroke="#ccbfc6" stroke-width="3"/>
+<rect x="97" y="69" width="266" height="35" rx="11" fill="#e2dcf0"/>
+<circle cx="121" cy="86" r="10" fill="#8d75b4"/><path d="M117 86h8m-4-4v8" stroke="#fff" stroke-width="2.4"/>
+<text x="142" y="91" font-size="17" fill="#534a72" font-family="sans-serif" font-weight="700">Healthcare Central</text>
+<path d="M126 141h203M126 161h167" stroke="#d1c4d6" stroke-width="11" stroke-linecap="round"/>
+<g transform="translate(112 193)"><rect width="74" height="72" rx="13" fill="#e9dfed"/><rect x="86" width="74" height="72" rx="13" fill="#deecea"/><rect x="172" width="74" height="72" rx="13" fill="#ede3d9"/>
+<path d="M28 25h19m-9-10v19" stroke="#8065b5" stroke-width="6" stroke-linecap="round"/><path d="M115 34q9-19 18 0q-9 19-18 0Z" fill="none" stroke="#4a9990" stroke-width="4"/><path d="M205 18l15 0 14 16v16h-29z" fill="none" stroke="#bd7a6c" stroke-width="4"/><circle cx="214" cy="52" r="4" fill="#bd7a6c"/><circle cx="232" cy="52" r="4" fill="#bd7a6c"/>
+</g></g>
+<g fill="none" stroke="#514a72" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+<path d="M97 13v77c0 55 26 83 75 83 47 0 74-27 74-81V29"/>
+<path d="M172 173v24c0 49 33 86 80 86 42 0 63-22 63-56"/>
+</g>
+<g stroke="#514a72" stroke-width="7" fill="#d2c5e5"><circle cx="96" cy="15" r="13"/><circle cx="246" cy="28" r="13"/><circle cx="314" cy="222" r="24" fill="#a89ac6"/><circle cx="314" cy="222" r="10" fill="#ede8ed"/></g>
+<g fill="none" stroke="#b290cd" stroke-width="3" stroke-linecap="round"><path d="M350 34q9-21 22-2q5 10-22 30q-25-20-20-31q10-15 20 3Z"/><path d="M394 123l16-11m-7 28 18-2m-24 14 10 14"/></g>
+<circle cx="353" cy="271" r="43" fill="#bad4ca" opacity=".32"/>
+</svg>
