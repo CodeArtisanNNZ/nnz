@@ -8,10 +8,6 @@ function chime(){stopSound();ctx=ctx||new(window.AudioContext||window.webkitAudi
 soundToggle.addEventListener("click",()=>{const open=panel.classList.toggle("open");soundToggle.setAttribute("aria-pressed",open);soundToggle.innerHTML=open?"<span>◉</span> Choose ambience":"<span>◌</span> Ambient sound";if(!open)stopSound()});document.querySelectorAll("[data-sound]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-sound]").forEach(x=>x.classList.remove("active"));b.classList.add("active");b.dataset.sound==="wood"?chime():noise(b.dataset.sound)}));document.getElementById("soundVolume").addEventListener("input",()=>{if(gain&&ctx&&source)gain.gain.linearRampToValueAtTime(selectedVolume(),ctx.currentTime+.15)});
 
 const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const progress=document.getElementById("scrollProgress");
-const updateProgress=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.transform=`scaleX(${max>0?scrollY/max:0})`};
-addEventListener("scroll",updateProgress,{passive:true});updateProgress();
-
 const revealItems=document.querySelectorAll(".section-label,.manifesto-grid>*,.project-card,.timeline article,.books-intro,.shelf,.contact>*");
 if(reducedMotion){revealItems.forEach(el=>el.classList.add("revealed"))}else{
   revealItems.forEach(el=>el.classList.add("reveal-item"));
