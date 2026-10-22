@@ -21,8 +21,8 @@
 #work .work-heading-copy{padding:0;min-width:0}
 #work .work-heading h2{
   color:#f6edee;
-  font:400 clamp(2.7rem,4.1vw,4rem)/1.02 "Instrument Serif",Georgia,serif;
-  letter-spacing:-.035em;
+  font:700 clamp(2.65rem,4.15vw,4rem)/.98 "Space Grotesk",sans-serif;
+  letter-spacing:-.058em;
   margin:0 0 13px;
 }
 #work .work-heading-copy>p{
@@ -131,8 +131,9 @@
 #work .scrap-card h3{
   margin:0 0 13px;
   color:var(--card-fg);
-  font:400 clamp(1.85rem,2.4vw,2.45rem)/1.0 "Instrument Serif",Georgia,serif;
-  letter-spacing:-.04em;
+  font:700 clamp(1.50rem,2vw,2rem)/1.08 "Space Grotesk",sans-serif;
+  letter-spacing:-.05em;
+  overflow-wrap:break-word;
 }
 #work .scrap-card .scrap-tagline{
   margin:0 0 12px;
@@ -348,7 +349,7 @@
     min-height:306px;
   }
   #work .scrap-card .scrap-copy{padding-top:26px;width:54%}
-  #work .scrap-card h3{font-size:clamp(1.85rem,7vw,2.45rem)}
+  #work .scrap-card h3{font-size:clamp(1.5rem,6vw,2rem)}
   #work .scrap-card .scrap-tagline{font-size:.9rem}
   #work .scrap-card .scrap-description{
     font-size:.72rem;
@@ -364,7 +365,7 @@
   #work .scrap-card:nth-child(4),
   #work .scrap-card:nth-child(5){height:291px;min-height:291px;padding:18px}
   #work .scrap-card .scrap-copy{width:58%;padding-top:26px}
-  #work .scrap-card h3{font-size:1.83rem}
+  #work .scrap-card h3{font-size:1.5rem}
   #work .scrap-card .scrap-tagline{font-size:.84rem}
   #work .scrap-card .scrap-description{-webkit-line-clamp:2;font-size:.68rem}
   #work .scrap-card .scrap-open{left:18px;bottom:15px}
