@@ -1,391 +1,376 @@
-/* Selected work: compact scrapbook cards.
-   Separate stylesheet so the Story, Library and main navigation remain untouched. */
-.scrapbook-work{position:relative;isolation:isolate;padding-top:88px;padding-bottom:88px;color:#f0ebf6}
-.scrapbook-work::before{content:"";position:absolute;inset:65px -4vw 0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 5% 36%,rgba(162,120,212,.075),transparent 32%),radial-gradient(circle at 95% 61%,rgba(220,175,122,.065),transparent 30%);border-radius:22px}
-.scrapbook-work .section-label{margin-bottom:20px}
-.work-heading{position:relative;display:flex;justify-content:space-between;align-items:center;gap:28px;min-height:124px;margin-bottom:27px}
-.work-heading-copy{padding-left:clamp(0px,11vw,160px)}
-.work-heading h2{font:400 clamp(2.5rem,4.3vw,4.25rem)/.96 "Instrument Serif",Georgia,serif;letter-spacing:-.035em;color:#f7ebeb;margin:0 0 15px;white-space:nowrap}
-.work-heading-copy>p{font:500 .73rem/1.5 "DM Mono",monospace;letter-spacing:.18em;color:#c6a8e1;margin:0}
-.work-margin-note,.work-after-note{font:italic 1.05rem/1.35 "Instrument Serif",Georgia,serif;letter-spacing:.035em;color:#c4a2dd;transform:rotate(-9deg);margin:0}
-.work-margin-note{position:absolute;left:8px;top:0;width:155px}
-.work-margin-note span{display:block;font-size:2.2rem;line-height:.9;text-align:right;transform:rotate(24deg);color:#ae92d0}
-.work-sunburst{font:400 1.35rem "DM Mono",monospace;position:relative;top:-17px;margin-left:10px;color:#ecc48c}
-.work-see-all{align-self:center;white-space:nowrap;display:inline-flex;align-items:center;gap:13px;padding:7px 0;color:#c9afe6!important;border-bottom:1px solid #aa8ecb;text-decoration:none!important;font:500 .79rem "DM Mono",monospace;margin-top:0}
-.work-see-all:hover,.work-see-all:focus-visible{color:white!important;border-color:white}
-.work-see-all span{transition:transform .2s}.work-see-all:hover span{transform:translate(3px,-3px)}
-.scrapbook-work .scrapbook-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px 23px;align-items:stretch;isolation:isolate;padding:5px 8px 20px}
-.scrapbook-work .scrap-card{grid-column:span 4;min-height:315px;height:315px;position:relative;isolation:isolate;overflow:visible;padding:22px 22px 20px 26px;border:1px solid rgba(64,47,74,.18);border-radius:13px;box-shadow:0 18px 38px rgba(9,9,25,.22),0 2px 2px rgba(17,9,26,.08);background:#f4eee5;color:#231d38;transform:none;transition:transform .32s cubic-bezier(.2,.7,.2,1),box-shadow .32s ease;will-change:transform}
-.scrapbook-work .scrap-card:nth-child(4){grid-column:2/span 5}
-.scrapbook-work .scrap-card:nth-child(5){grid-column:7/span 5}
-.scrapbook-work .scrap-card:hover{transform:translateY(-6px) rotate(-.2deg);box-shadow:0 30px 52px rgba(9,9,25,.35);border-color:rgba(114,80,130,.33)}
-.scrapbook-work .scrap-card:focus-within{outline:2px solid #c49feb;outline-offset:4px}
-.scrapbook-work .scrap-card::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#9b879d 0.35px,transparent .45px);background-size:6px 6px;border-radius:inherit}
-.scrapbook-work .scrap-card>*{z-index:1}
-.scrapbook-work .scrap-topline{position:relative;z-index:4;display:flex;align-items:center;gap:12px;min-height:30px;font:500 .62rem/1.3 "DM Mono",monospace;letter-spacing:.09em;color:#595069}
-.scrapbook-work .scrap-index{display:grid;place-items:center;width:34px;height:30px;flex:0 0 34px;border-radius:8px;border:1px solid rgba(81,66,99,.23);font:.95rem "DM Mono",monospace;color:#322c45;letter-spacing:0}
-.scrapbook-work .scrap-copy{position:relative;z-index:3;width:56%;max-width:260px;padding-top:31px}
-.scrapbook-work .scrap-copy h3{font:400 clamp(1.75rem,2.6vw,2.3rem)/1.0 "Instrument Serif",Georgia,serif;letter-spacing:-.03em;color:#201b37;margin:0 0 17px}
-.scrapbook-work .scrap-tagline{font:500 clamp(.89rem,1.18vw,1.13rem)/1.35 "Space Grotesk",sans-serif;color:#7c5ba7;margin:0 0 14px}
-.scrapbook-work .scrap-description{font:.78rem/1.48 Inter,sans-serif;color:#555067;margin:0;max-width:230px}
-.scrapbook-work .scrap-open{position:absolute;z-index:8;left:0;bottom:-58px;display:inline-flex;align-items:center;gap:8px;color:#443c64!important;font:.66rem "DM Mono",monospace;text-decoration:none!important;white-space:nowrap;margin:0;padding:0}
-.scrapbook-work .scrap-open span{display:grid;place-items:center;width:33px;height:33px;border-radius:50%;background:#443568;color:#fff;font:1.25rem "Inter",sans-serif;transition:transform .22s,background .22s}
-.scrapbook-work .scrap-open:hover span{transform:translateX(4px);background:#7e61b1}
-.scrapbook-work .scrap-art{position:absolute;z-index:2;right:-12px;bottom:9px;width:59%;height:78%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 12px 12px rgba(25,18,32,.13))}
-.scrapbook-work .scrap-tape{position:absolute;z-index:6;width:75px;height:24px;top:-14px;left:22px;transform:rotate(-12deg);clip-path:polygon(0 4%,95% 0,100% 100%,4% 95%);box-shadow:0 2px 8px #0003;opacity:.86}
-.scrapbook-work .tape-purple{background:repeating-linear-gradient(135deg,#9b80c2 0 5px,#bda7d5 5px 10px)}
-.scrapbook-work .tape-blue{left:auto;right:50px;transform:rotate(10deg);background:repeating-linear-gradient(120deg,#91acc9 0 6px,#b8cede 6px 12px)}
-.scrapbook-work .tape-coral{left:auto;right:36px;transform:rotate(-10deg);background:repeating-linear-gradient(120deg,#c78e93 0 7px,#dfb1ad 7px 13px)}
-.scrapbook-work .scrap-scribble{position:absolute;z-index:4;font:italic .83rem/1.3 "Instrument Serif",Georgia,serif;color:#665079;transform:rotate(-8deg);pointer-events:none}
-.scrapbook-work .scribble-bujhi{right:15px;top:46px;text-align:center}
-.scrapbook-work .paper-punch{position:absolute;left:-6px;top:58px;bottom:31px;width:15px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;z-index:5;pointer-events:none}
-.scrapbook-work .paper-punch i{width:13px;height:13px;border-radius:50%;background:#252238;box-shadow:inset 1px 1px 1px #121029}
-.scrapbook-work .scrap-bujhi{background:linear-gradient(110deg,#f7f0e5,#eee4d8)}
-.scrapbook-work .scrap-bujhi::after{content:"";position:absolute;z-index:-1;inset:auto 5px -8px 15px;height:14px;background:#a88fb2;border-radius:4px;transform:rotate(-2deg)}
-.scrapbook-work .scrap-health{background:linear-gradient(132deg,#f8f0e3,#efebec)}
-.scrapbook-work .scrap-health .scrap-art{width:65%;right:-19px;bottom:-4px;height:85%;opacity:.98}
-.scrapbook-work .scrap-health .scrap-copy{width:56%}
-.scrapbook-work .health-heart{position:absolute;right:26px;top:63px;font-size:2rem;color:#8e7fb5;transform:rotate(9deg)}
-.scrapbook-work .scrap-comet{background:linear-gradient(145deg,#151a36,#27223f 68%,#19192f);color:#eee5f4;border-color:#55516a}
-.scrapbook-work .scrap-comet::before{opacity:.18;background-image:radial-gradient(#cfcee6 .6px,transparent .8px);background-size:17px 16px}
-.scrapbook-work .scrap-comet .scrap-topline{color:#c5b8cf}
-.scrapbook-work .scrap-comet .scrap-index{color:#efebf6;border-color:rgba(235,228,250,.4)}
-.scrapbook-work .scrap-comet .scrap-copy h3{color:#fff1e4}
-.scrapbook-work .scrap-comet .scrap-tagline{color:#c3a8e5}
-.scrapbook-work .scrap-comet .scrap-description{color:#c2bbd3}
-.scrapbook-work .scrap-comet .scrap-open{color:#e5d1f3!important}
-.scrapbook-work .scrap-comet .scrap-open span{background:#a17acc;color:#19162e}
-.scrapbook-work .scrap-comet .scrap-art{width:77%;height:85%;right:-40px;bottom:-3px;opacity:.92}
-.scrapbook-work .scrap-comet-star{position:absolute;right:35px;top:49px;color:#e5c78c;font-size:2rem;animation:work-star-twinkle 4s ease-in-out infinite}
-.scrapbook-work .scrap-owl{background:linear-gradient(130deg,#f6f2e7,#e9e3e4)}
-.scrapbook-work .scrap-owl::before{background-image:linear-gradient(#ae9dc123 1px,transparent 1px),linear-gradient(90deg,#ae9dc123 1px,transparent 1px);background-size:20px 20px;opacity:.5}
-.scrapbook-work .scrap-owl .scrap-art{width:61%;height:96%;right:-10px;bottom:-9px}
-.scrapbook-work .scrap-owl .scrap-copy{width:54%;padding-top:30px}
-.scrapbook-work .scrap-owl .scrap-copy h3{font-size:2.7rem}
-.scrapbook-work .scrap-clip{position:absolute;z-index:7;top:-12px;left:40px;width:23px;height:55px;border:4px solid #9c938d;border-bottom-left-radius:13px;border-bottom-right-radius:13px;border-top-left-radius:14px;border-top-right-radius:14px;transform:rotate(12deg);box-shadow:1px 3px 3px #0003}
-.scrapbook-work .scrap-airmail{position:absolute;right:22%;bottom:35px;color:#8877a8;font-size:1.7rem;transform:rotate(-22deg)}
-.scrapbook-work .scrap-madam{background:linear-gradient(125deg,#231d34,#322334 85%);color:#eee4e4;border-color:#79575f}
-.scrapbook-work .scrap-madam::before{opacity:.15;background-image:radial-gradient(#d9a7a1 .6px,transparent .8px);background-size:12px 12px}
-.scrapbook-work .scrap-madam .scrap-topline{color:#e8c7ba}
-.scrapbook-work .scrap-madam .scrap-index{color:#ffe8d3;border-color:#9e808c}
-.scrapbook-work .scrap-madam .scrap-copy h3{color:#f8e9dd}
-.scrapbook-work .scrap-madam .scrap-tagline{color:#c6a7d5}
-.scrapbook-work .scrap-madam .scrap-description{color:#d1c3d1}
-.scrapbook-work .scrap-madam .scrap-open{color:#f4e3e0!important}
-.scrapbook-work .scrap-madam .scrap-open span{background:#bd7c7a}
-.scrapbook-work .scrap-madam .scrap-art{width:72%;height:100%;right:-26px;bottom:-5px}
-.scrapbook-work .scribble-madam{color:#efcfad;top:60px;right:27px}
-.work-after{display:flex;position:relative;gap:30px;justify-content:space-between;align-items:center;margin:40px 4px 0;padding:24px 0 0;border-top:1px solid rgba(226,203,246,.2)}
-.work-after-note{font-size:1.1rem;width:155px;flex:0 0 155px;text-align:center;transform:rotate(-7deg)}
-.other-work{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;flex:1}
-.other-work-label{font:500 .62rem "DM Mono",monospace;letter-spacing:.15em;color:#b59acb;margin-right:7px}
-.other-work a{display:inline-flex;align-items:center;gap:8px;padding:11px 15px;border:1px solid rgba(212,188,234,.28);border-radius:100px;color:#efe9f9!important;text-decoration:none!important;font:600 .83rem Inter,sans-serif;background:#29273e;transition:background .2s,border-color .2s}
-.other-work a small{font-weight:400;font-size:.69rem;color:#baacc8}
-.other-work a:hover{background:#3a3355;border-color:#bfabe0}
-.work-process{font:.72rem "DM Mono",monospace;color:#cbb7e1;flex:0 1 175px;min-width:150px}
-.work-process summary{cursor:pointer;text-decoration:underline;text-underline-offset:5px}
-.work-process[open]{position:relative}
-.work-process ol{position:absolute;z-index:15;right:0;bottom:25px;width:300px;max-width:calc(100vw - 40px);padding:20px 20px 20px 36px;background:#ede7e2;color:#332947;border:1px solid #c3a9c5;border-radius:9px;box-shadow:0 14px 30px #05040c88}
-.work-process li{margin:0 0 8px;line-height:1.55}
-@keyframes work-star-twinkle{0%,100%{opacity:.6;transform:rotate(-7deg) scale(.94)}50%{opacity:1;transform:rotate(8deg) scale(1.1)}}
-@media (min-width:1450px){.scrapbook-work .scrap-card{height:340px}.scrapbook-work .scrap-copy{padding-top:36px}.scrapbook-work .scrap-copy h3{font-size:2.45rem}.scrapbook-work .scrap-tagline{font-size:1.12rem}}
-@media (max-width:1130px){
-  .scrapbook-work .scrapbook-grid{gap:17px}
-  .scrapbook-work .scrap-card{padding:19px 16px 17px 20px;height:315px}
-  .scrapbook-work .scrap-copy{width:61%;padding-top:29px}
-  .scrapbook-work .scrap-copy h3{font-size:1.75rem}
-  .scrapbook-work .scrap-tagline{font-size:.87rem}
-  .scrapbook-work .scrap-description{font-size:.72rem}
-  .scrapbook-work .scrap-art{right:-15px;width:62%}
-  .scrapbook-work .scribble-bujhi{display:none}
-  .work-heading-copy{padding-left:120px}
-}
-@media (max-width:900px){
-  .scrapbook-work{padding-top:70px}
-  .scrapbook-work .scrapbook-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:4px 3px}
-  .scrapbook-work .scrap-card,.scrapbook-work .scrap-card:nth-child(4),.scrapbook-work .scrap-card:nth-child(5){grid-column:auto;height:340px;min-height:340px}
-  .scrapbook-work .scrap-card:nth-child(5){grid-column:1/-1;width:min(100%,480px);justify-self:center}
-  .scrapbook-work .scrap-copy{width:58%}
-  .scrapbook-work .scrap-copy h3{font-size:2rem}
-  .scrapbook-work .scrap-tagline{font-size:.95rem}
-  .work-heading-copy{padding-left:110px}
-  .work-heading h2{font-size:3rem}
-  .work-after{flex-wrap:wrap}
-  .work-after-note{flex:1 0 90px}
-  .other-work{flex:2 1 390px}
-  .work-process{flex:1 1 100%;text-align:right}
-}
-@media (max-width:650px){
-  .scrapbook-work .section-label{margin-bottom:14px}
-  .work-heading{min-height:auto;margin:18px 0 27px;flex-wrap:wrap;gap:16px}
-  .work-heading-copy{padding:0}
-  .work-heading h2{font-size:clamp(2.4rem,11vw,3.3rem)}
-  .work-heading-copy>p{font-size:.59rem}
-  .work-margin-note{position:relative;order:2;width:100%;margin:0;transform:rotate(-3deg);font-size:.88rem;line-height:1.15}
-  .work-margin-note span{display:inline-block;margin-left:12px;font-size:1.5rem}
-  .work-see-all{position:absolute;right:0;top:8px;font-size:.64rem;background:#2a253d}
-  .scrapbook-work .scrapbook-grid{grid-template-columns:1fr;gap:24px}
-  .scrapbook-work .scrap-card,.scrapbook-work .scrap-card:nth-child(4),.scrapbook-work .scrap-card:nth-child(5){grid-column:auto;width:100%;max-width:520px;justify-self:center;height:305px;min-height:305px}
-  .scrapbook-work .scrap-copy{width:57%;padding-top:24px}
-  .scrapbook-work .scrap-copy h3{font-size:clamp(1.95rem,7vw,2.5rem);margin-bottom:13px}
-  .scrapbook-work .scrap-tagline{font-size:.93rem;margin-bottom:10px}
-  .scrapbook-work .scrap-description{font-size:.72rem}
-  .scrapbook-work .scrap-open{bottom:-54px}
-  .scrapbook-work .scrap-art{width:62%;height:78%;right:-12px}
-  .scrapbook-work .scrap-comet .scrap-art,.scrapbook-work .scrap-madam .scrap-art{width:72%}
-  .scrapbook-work .scrap-owl .scrap-art{width:61%}
-  .scrapbook-work .scrap-card:nth-child(5){width:100%}
-  .work-after{display:block;margin-top:28px}
-  .work-after-note{width:auto;text-align:left;margin:0 0 20px;font-size:1rem}
-  .other-work{justify-content:flex-start}
-  .other-work-label{width:100%;margin-bottom:4px}
-  .other-work a{font-size:.75rem}
-  .other-work a small{display:none}
-  .work-process{margin-top:19px;text-align:left}
-  .work-process ol{left:0;right:auto;bottom:20px}
-}
-@media (max-width:370px){
-  .scrapbook-work .scrap-card{padding:16px 13px 16px 19px;height:290px;min-height:290px}
-  .scrapbook-work .scrap-copy h3{font-size:1.85rem}
-  .scrapbook-work .scrap-copy{width:60%;padding-top:27px}
-  .scrapbook-work .scrap-description{font-size:.68rem}
-  .scrapbook-work .scrap-tagline{font-size:.84rem}
-  .scrapbook-work .scrap-art{width:63%;right:-13px}
-  .scrapbook-work .scrap-topline{gap:8px;font-size:.54rem}
-}
-@media(prefers-reduced-motion:reduce){
-  .scrapbook-work .scrap-card,.scrapbook-work .scrap-open span,.scrapbook-work .scrap-comet-star,.work-see-all span{transition:none!important;animation:none!important}
-  .scrapbook-work .scrap-card:hover{transform:none}
-}
 
-/* Explicit stack layers override the older .project-card > * selector. */
-.scrapbook-work .scrap-card > .scrap-topline{position:relative;z-index:6}
-.scrapbook-work .scrap-card > .scrap-copy{position:relative;z-index:4}
-.scrapbook-work .scrap-card > .scrap-art{position:absolute;z-index:2}
-.scrapbook-work .scrap-card > .scrap-open{position:absolute;z-index:8;left:25px;bottom:19px;top:auto;right:auto}
-.scrapbook-work .scrap-card > .scrap-tape,
-.scrapbook-work .scrap-card > .scrap-clip{position:absolute;z-index:9}
-.scrapbook-work .scrap-card > .paper-punch{position:absolute;z-index:9}
-.scrapbook-work .scrap-card > .scrap-scribble,
-.scrapbook-work .scrap-card > .scrap-doodle,
-.scrapbook-work .scrap-card > .scrap-comet-star{position:absolute;z-index:5}
-@media(max-width:650px){
-  .scrapbook-work .scrap-card > .scrap-open{left:20px;bottom:17px}
+/* Selected Work v3: a single, self-contained scrapbook layout.
+   No inherited experimental overrides from earlier versions. */
+#work.scrapbook-work {
+  position:relative;
+  isolation:isolate;
+  padding-top:90px;
+  padding-bottom:85px;
+  color:#f1e8f5;
 }
-
-/* Layout correction, Oct 2026: keep decorative notes in flow, align both card rows,
-   and prevent imagery / the secondary links from competing with the page content. */
-.scrapbook-work .work-heading{
-  display:grid;
-  grid-template-columns:clamp(128px,13vw,180px) minmax(0,1fr) max-content;
-  align-items:center;
-  column-gap:clamp(16px,2.5vw,32px);
-  min-height:108px;
-  margin:0 0 29px;
+#work .section-label{margin-bottom:30px}
+#work .work-heading{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:end;
+  justify-content:space-between;
+  gap:16px 28px;
+  margin:0 0 30px;
+  min-height:0;
 }
-.scrapbook-work .work-heading-copy{padding-left:0;min-width:0}
-.scrapbook-work .work-heading h2{
-  margin:0 0 12px;
-  font-size:clamp(2.65rem,4.2vw,4.15rem);
-  line-height:1.02;
-  white-space:normal;
+#work .work-heading-copy{padding:0;min-width:0}
+#work .work-heading h2{
+  color:#f6edee;
+  font:400 clamp(2.7rem,4.1vw,4rem)/1.02 "Instrument Serif",Georgia,serif;
+  letter-spacing:-.035em;
+  margin:0 0 13px;
 }
-.scrapbook-work .work-margin-note{
-  position:static;
-  align-self:center;
-  width:auto;
-  max-width:165px;
-  margin:0 0 3px 5px;
-  font-size:.98rem;
-  line-height:1.22;
-  transform:rotate(-7deg);
-}
-.scrapbook-work .work-margin-note span{
-  display:block;
-  font-size:1.5rem;
-  line-height:1;
-  margin:2px 0 0;
-  text-align:right;
-}
-.scrapbook-work .work-see-all{
-  position:static;
-  align-self:center;
-  justify-self:end;
+#work .work-heading-copy>p{
+  color:#d0b5e6;
+  font:500 .72rem/1.4 "DM Mono",monospace;
+  letter-spacing:.17em;
   margin:0;
-  padding:7px 0;
-  background:transparent;
 }
-.scrapbook-work .work-sunburst{top:-.45em;font-size:1.15rem}
+#work .work-see-all{
+  margin:0 0 3px;
+  padding:8px 0;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#d9b8ed;
+  border-bottom:1px solid #c0a4d6;
+  text-decoration:none;
+  font:500 .75rem "DM Mono",monospace;
+  transition:color .18s,border-color .18s;
+}
+#work .work-see-all:hover{color:#fff;border-color:#fff}
+#work .work-see-all:focus-visible,
+#work .scrap-open:focus-visible,
+#work .other-work a:focus-visible,
+#work .work-process summary:focus-visible{
+  outline:2px solid #e2c4ff;
+  outline-offset:4px;
+}
 
-/* All five featured cards have the same width: 3 across, then 2 centered. */
-.scrapbook-work .scrapbook-grid{
+/* A real 3 + 2 grid, with BOTH lower cards the same width as the upper three. */
+#work .scrapbook-grid{
   display:grid;
   grid-template-columns:repeat(6,minmax(0,1fr));
-  gap:25px 22px;
-  padding:7px 4px 8px;
   align-items:stretch;
+  gap:24px;
+  padding:12px 0 6px;
 }
-.scrapbook-work .scrap-card,
-.scrapbook-work .scrap-card:nth-child(4),
-.scrapbook-work .scrap-card:nth-child(5){
-  grid-column:span 2;
-  width:100%;
-  min-width:0;
-  max-width:none;
-  height:327px;
-  min-height:327px;
-}
-.scrapbook-work .scrap-card:nth-child(4){grid-column:2/span 2}
-.scrapbook-work .scrap-card:nth-child(5){grid-column:4/span 2}
-/* More restrained artwork keeps typography legible and stays within card edges. */
-.scrapbook-work .scrap-card > .scrap-art{
-  right:4px;
-  bottom:8px;
-  width:56%;
-  max-width:56%;
-  height:76%;
-  object-fit:contain;
-}
-.scrapbook-work .scrap-health > .scrap-art{right:1px;bottom:5px;width:58%;max-width:58%;height:77%}
-.scrapbook-work .scrap-comet > .scrap-art{right:1px;bottom:5px;width:61%;max-width:61%;height:79%}
-.scrapbook-work .scrap-owl > .scrap-art{right:0;bottom:2px;width:55%;max-width:55%;height:83%}
-.scrapbook-work .scrap-madam > .scrap-art{right:2px;bottom:5px;width:60%;max-width:60%;height:80%}
-.scrapbook-work .scrap-card .scrap-copy{
+#work .scrap-card{
+  --card-bg:#f5efe7;
+  --card-fg:#27223b;
+  --card-sub:#7e62a7;
+  --card-muted:#5e536a;
   position:relative;
-  width:53%;
-  max-width:235px;
-  padding-top:26px;
-}
-.scrapbook-work .scrap-card .scrap-copy h3{margin:0 0 13px;font-size:clamp(1.75rem,2.4vw,2.2rem)}
-.scrapbook-work .scrap-owl .scrap-copy h3{font-size:clamp(1.85rem,2.7vw,2.4rem)}
-.scrapbook-work .scrap-card .scrap-tagline{font-size:clamp(.85rem,1.05vw,1rem);line-height:1.33;margin-bottom:11px}
-.scrapbook-work .scrap-card .scrap-description{font-size:.73rem;line-height:1.45}
-.scrapbook-work .scrap-card > .scrap-open{left:24px;bottom:16px;gap:10px}
-.scrapbook-work .scrap-card > .scrap-open span{width:32px;height:32px}
-.scrapbook-work .scrap-madam .scrap-description{max-width:195px}
-
-/* Organized secondary projects: no floating handwriting or unexpected wrapping. */
-.scrapbook-work .work-after{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) max-content;
-  align-items:center;
-  gap:22px 28px;
-  padding-top:22px;
-  margin:25px 4px 0;
-}
-.scrapbook-work .other-work{
-  display:flex;
+  grid-column:span 2;
   min-width:0;
+  width:100%;
+  height:318px;
+  min-height:318px;
+  overflow:visible;
+  padding:20px 20px 19px 23px;
+  background:var(--card-bg);
+  color:var(--card-fg);
+  border:1px solid rgba(93,65,91,.20);
+  border-radius:12px;
+  box-shadow:0 17px 36px rgba(10,10,30,.22),0 2px 6px rgba(10,10,30,.07);
+  transition:box-shadow .24s,translate .24s;
+}
+#work .scrap-card:nth-child(4){grid-column:2/span 2}
+#work .scrap-card:nth-child(5){grid-column:4/span 2}
+#work .scrap-card:hover{
+  translate:0 -4px;
+  border-color:rgba(195,163,218,.55);
+  box-shadow:0 24px 45px rgba(10,10,30,.31);
+}
+#work .scrap-card::before{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:0;
+  border-radius:inherit;
+  background-image:radial-gradient(#8b7584 .45px,transparent .6px);
+  background-size:7px 7px;
+  opacity:.22;
+  pointer-events:none;
+}
+#work .scrap-card::after{pointer-events:none}
+#work .scrap-card > *{z-index:1}
+#work .scrap-card .scrap-topline{
+  position:relative;
+  z-index:4;
+  display:flex;
   align-items:center;
-  justify-content:flex-start;
-  flex-wrap:wrap;
-  flex:none;
-  gap:10px 12px;
+  gap:11px;
+  min-height:29px;
+  font:500 .58rem/1.35 "DM Mono",monospace;
+  letter-spacing:.075em;
+  color:var(--card-muted);
 }
-.scrapbook-work .other-work-label{flex:none;margin:0 8px 0 0}
-.scrapbook-work .other-work a{
+#work .scrap-card .scrap-index{
+  display:grid;
+  flex:0 0 34px;
+  width:34px;
+  height:29px;
+  place-items:center;
+  border:1px solid currentColor;
+  border-radius:8px;
+  font:400 .83rem "DM Mono",monospace;
+}
+#work .scrap-card .scrap-copy{
+  position:relative;
+  z-index:3;
+  width:55%;
+  padding:31px 0 0;
+  max-width:220px;
+}
+#work .scrap-card h3{
+  margin:0 0 13px;
+  color:var(--card-fg);
+  font:400 clamp(1.85rem,2.4vw,2.45rem)/1.0 "Instrument Serif",Georgia,serif;
+  letter-spacing:-.04em;
+}
+#work .scrap-card .scrap-tagline{
+  margin:0 0 12px;
+  color:var(--card-sub);
+  font:600 clamp(.86rem,1.13vw,1rem)/1.3 "Space Grotesk",sans-serif;
+}
+#work .scrap-card .scrap-description{
+  margin:0;
+  max-width:190px;
+  color:var(--card-muted);
+  font:400 .73rem/1.45 Inter,sans-serif;
+}
+#work .scrap-card .scrap-art{
+  position:absolute;
+  z-index:2;
+  right:0;
+  bottom:10px;
+  width:58%;
+  max-width:58%;
+  height:76%;
+  display:block;
+  object-fit:contain;
+  pointer-events:none;
+  filter:drop-shadow(0 7px 9px rgba(20,14,35,.09));
+}
+#work .scrap-card .scrap-open{
+  position:absolute;
+  z-index:8;
+  left:22px;
+  bottom:17px;
+  top:auto;
+  margin:0;
   display:inline-flex;
-  flex:none;
-  gap:9px;
-  margin:0;
-  padding:11px 15px;
-  min-height:42px;
-  max-width:100%;
-  border-radius:999px;
-  font-size:.8rem;
-  text-decoration:none!important;
-  transition:background .2s,border-color .2s,transform .2s;
+  align-items:center;
+  gap:10px;
+  color:var(--card-fg);
+  text-decoration:none;
+  font:500 .67rem "DM Mono",monospace;
+  white-space:nowrap;
 }
-.scrapbook-work .other-work a:hover{transform:translateY(-2px)}
-.scrapbook-work .other-work a small{font-size:.68rem;white-space:nowrap}
-.scrapbook-work .work-process{
-  flex:none;
-  min-width:200px;
-  margin:0;
-  justify-self:end;
-  text-align:right;
-  font-size:.71rem;
+#work .scrap-card .scrap-open span{
+  display:grid;
+  place-items:center;
+  width:33px;
+  height:33px;
+  border-radius:50%;
+  background:#48386f;
+  color:#fff;
+  font:400 1.25rem Inter,sans-serif;
+  transition:transform .2s,background .2s;
 }
-.scrapbook-work .work-process summary{list-style:none}
-.scrapbook-work .work-process summary::-webkit-details-marker{display:none}
+#work .scrap-card .scrap-open:hover span{transform:translateX(4px);background:#8060ad}
 
-/* Tablet: two columns; fifth card centered at the same physical width. */
-@media(max-width:1100px){
-  .scrapbook-work .work-heading{grid-template-columns:125px minmax(0,1fr) max-content;gap:18px}
-  .scrapbook-work .work-margin-note{font-size:.87rem;max-width:125px}
-  .scrapbook-work .work-heading h2{font-size:clamp(2.45rem,4.5vw,3.35rem)}
-  .scrapbook-work .scrapbook-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:21px;padding:7px 3px}
-  .scrapbook-work .scrap-card,
-  .scrapbook-work .scrap-card:nth-child(4),
-  .scrapbook-work .scrap-card:nth-child(5){grid-column:auto;height:333px;min-height:333px}
-  .scrapbook-work .scrap-card:nth-child(5){grid-column:1/-1;max-width:calc((100% - 21px)/2);justify-self:center}
-  .scrapbook-work .work-after{grid-template-columns:1fr;align-items:start}
-  .scrapbook-work .work-process{justify-self:start;text-align:left;min-width:0}
-  .scrapbook-work .work-process ol{left:0;right:auto}
+/* Tactile details, kept outside the main content and away from text. */
+#work .scrap-tape{
+  position:absolute;
+  z-index:7;
+  top:-13px;
+  left:25px;
+  width:73px;
+  height:23px;
+  transform:rotate(-11deg);
+  background:repeating-linear-gradient(135deg,#aa91ca 0 6px,#c2b0d7 6px 12px);
+  opacity:.88;
+  clip-path:polygon(2% 2%,100% 0,98% 100%,0 94%);
 }
-@media(max-width:690px){
-  .scrapbook-work .work-heading{
-    grid-template-columns:minmax(0,1fr);
-    gap:9px;
-    align-items:start;
-    min-height:0;
-    margin:0 0 23px;
-  }
-  .scrapbook-work .work-heading-copy{order:0}
-  .scrapbook-work .work-heading h2{font-size:clamp(2.3rem,8.5vw,3.3rem);margin-bottom:9px}
-  .scrapbook-work .work-heading-copy>p{font-size:.63rem;letter-spacing:.12em}
-  .scrapbook-work .work-margin-note{
-    order:1;
-    display:block;
-    margin:8px 0 0 4px;
-    width:auto;
-    max-width:none;
-    transform:rotate(-2deg);
-    font-size:.85rem;
-  }
-  .scrapbook-work .work-margin-note br{display:none}
-  .scrapbook-work .work-margin-note span{display:inline-block;font-size:1rem;transform:none;margin:0 0 0 6px}
-  .scrapbook-work .work-see-all{order:2;justify-self:start;font-size:.72rem;margin-top:3px}
-  .scrapbook-work .scrapbook-grid{grid-template-columns:minmax(0,1fr);gap:21px}
-  .scrapbook-work .scrap-card,
-  .scrapbook-work .scrap-card:nth-child(4),
-  .scrapbook-work .scrap-card:nth-child(5){
+#work .tape-blue{left:auto;right:40px;background:repeating-linear-gradient(135deg,#9ab3ce 0 6px,#bfd0e3 6px 12px);transform:rotate(9deg)}
+#work .tape-sage{left:auto;right:43px;background:repeating-linear-gradient(135deg,#8bada0 0 6px,#c2cfba 6px 12px);transform:rotate(8deg)}
+#work .paper-punch{
+  position:absolute;
+  z-index:6;
+  left:-7px;
+  top:60px;
+  bottom:36px;
+  width:14px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  pointer-events:none;
+}
+#work .paper-punch i{width:13px;height:13px;background:#272237;border-radius:50%}
+#work .scrap-clip{
+  position:absolute;
+  z-index:7;
+  top:-11px;
+  left:44px;
+  height:52px;
+  width:21px;
+  border:3px solid #89818d;
+  border-radius:12px;
+  transform:rotate(13deg);
+  pointer-events:none;
+  box-shadow:2px 2px 3px #0002;
+}
+#work .scrap-doodle{position:absolute;z-index:4;right:25px;top:67px;color:#a98bc9;font-size:1.8rem;pointer-events:none}
+#work .scrap-airmail{position:absolute;z-index:4;right:22%;bottom:30px;color:#a48cb7;font-size:1.6rem;pointer-events:none}
+#work .scrap-comet-star{position:absolute;z-index:4;right:38px;top:60px;color:#e8c898;font-size:1.8rem;pointer-events:none}
+
+/* Project-by-project treatment, no full-bleed artwork escaping the card. */
+#work .scrap-bujhi{background:linear-gradient(133deg,#f8f2e9,#eee6dc)}
+#work .scrap-health{background:linear-gradient(135deg,#f8f0e5,#ede7e8)}
+#work .scrap-health .scrap-art{right:-1%;width:61%;max-width:61%;bottom:5px;height:78%}
+#work .scrap-comet{
+  --card-bg:#1b2038;
+  --card-fg:#f8ede7;
+  --card-sub:#ceb6ef;
+  --card-muted:#c5c2d7;
+  background:linear-gradient(130deg,#18203c,#29223e);
+  border-color:#544e6a;
+}
+#work .scrap-comet::before{background-image:radial-gradient(#f4d8b2 .65px,transparent .8px);background-size:17px 16px;opacity:.20}
+#work .scrap-comet .scrap-art{width:66%;max-width:66%;bottom:5px;height:85%}
+#work .scrap-comet .scrap-open span{background:#ac8ad0;color:#20172e}
+#work .scrap-owl{background:linear-gradient(130deg,#f8f4ea,#ece9e7)}
+#work .scrap-owl::before{background-image:linear-gradient(#b4a8c12b 1px,transparent 1px),linear-gradient(90deg,#b4a8c12b 1px,transparent 1px);background-size:18px 18px;opacity:.6}
+#work .scrap-owl .scrap-art{width:58%;max-width:58%;height:87%;bottom:2px}
+#work .scrap-lifehistory{
+  --card-fg:#f7ebdf;
+  --card-sub:#ceb5d9;
+  --card-muted:#d0c3d5;
+  background:linear-gradient(140deg,#1a2836,#28253a 82%);
+  border-color:#62717d;
+}
+#work .scrap-lifehistory .scrap-art{width:64%;max-width:64%;height:85%;bottom:5px}
+#work .scrap-lifehistory .scrap-open span{background:#916eac}
+
+/* Make the secondary projects a single tidy row. */
+#work .work-after{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:15px 24px;
+  margin:24px 0 0;
+  padding:23px 0 0;
+  border-top:1px solid rgba(232,218,248,.22);
+}
+#work .other-work{display:flex;align-items:center;flex-wrap:wrap;gap:10px 12px;min-width:0}
+#work .other-work-label{
+  color:#c2abd9;
+  font:500 .67rem "DM Mono",monospace;
+  letter-spacing:.13em;
+  margin-right:6px;
+}
+#work .other-work a{
+  margin:0;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:11px 16px;
+  border:1px solid rgba(227,210,247,.30);
+  border-radius:999px;
+  background:#2d2942;
+  color:#faf0ff;
+  text-decoration:none;
+  font:600 .8rem Inter,sans-serif;
+  transition:background .2s;
+}
+#work .other-work a:hover{background:#413a5c}
+#work .other-work a small{display:none}
+#work .work-process{
+  justify-self:end;
+  position:relative;
+  font:500 .70rem "DM Mono",monospace;
+  color:#d1bde2;
+  min-width:0;
+}
+#work .work-process summary{cursor:pointer;text-decoration:underline;text-underline-offset:5px;white-space:nowrap}
+#work .work-process ol{
+  position:absolute;
+  z-index:10;
+  top:calc(100% + 12px);
+  right:0;
+  bottom:auto;
+  width:min(300px,calc(100vw - 40px));
+  margin:0;
+  padding:18px 20px 18px 36px;
+  border:1px solid #ccb6dd;
+  border-radius:10px;
+  background:#f1e8e4;
+  box-shadow:0 18px 40px #0504167a;
+  color:#322940;
+  text-align:left;
+}
+#work .work-process li{margin:0 0 7px;line-height:1.5}
+
+/* Phones and tablets; no overlaps and no horizontal overflow. */
+@media(max-width:1120px){
+  #work .scrapbook-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  #work .scrap-card,
+  #work .scrap-card:nth-child(4),
+  #work .scrap-card:nth-child(5){grid-column:auto;height:332px;min-height:332px}
+  #work .scrap-card:nth-child(5){grid-column:1/-1;width:calc((100% - 22px)/2);justify-self:center}
+  #work .work-after{grid-template-columns:1fr}
+  #work .work-process{justify-self:start}
+  #work .work-process ol{right:auto;left:0}
+}
+@media(max-width:700px){
+  #work.scrapbook-work{padding-top:65px;padding-bottom:70px}
+  #work .section-label{margin-bottom:24px}
+  #work .work-heading{align-items:start;flex-direction:column;gap:18px;margin-bottom:26px}
+  #work .work-heading h2{font-size:clamp(2.45rem,9vw,3.3rem)}
+  #work .work-see-all{font-size:.7rem}
+  #work .scrapbook-grid{grid-template-columns:minmax(0,1fr);gap:25px}
+  #work .scrap-card,
+  #work .scrap-card:nth-child(4),
+  #work .scrap-card:nth-child(5){
     grid-column:1;
     width:100%;
-    max-width:500px;
-    height:310px;
-    min-height:310px;
+    max-width:510px;
     justify-self:center;
+    height:306px;
+    min-height:306px;
   }
-  .scrapbook-work .scrap-card .scrap-copy{width:54%;padding-top:23px}
-  .scrapbook-work .scrap-card .scrap-copy h3{font-size:clamp(1.8rem,6.2vw,2.15rem)}
-  .scrapbook-work .scrap-card .scrap-tagline{font-size:.9rem}
-  .scrapbook-work .scrap-card .scrap-description{font-size:.71rem}
-  .scrapbook-work .scrap-card > .scrap-open{left:20px;bottom:15px}
-  .scrapbook-work .other-work{display:flex;gap:10px}
-  .scrapbook-work .other-work-label{flex-basis:100%;margin-bottom:1px}
-  .scrapbook-work .other-work a{padding:10px 13px}
-  .scrapbook-work .other-work a small{display:none}
-  .scrapbook-work .work-after{margin-top:25px}
-}
-@media(max-width:380px){
-  .scrapbook-work .scrap-card,
-  .scrapbook-work .scrap-card:nth-child(4),
-  .scrapbook-work .scrap-card:nth-child(5){height:292px;min-height:292px}
-  .scrapbook-work .scrap-card .scrap-copy h3{font-size:1.75rem}
-  .scrapbook-work .scrap-card .scrap-description{font-size:.68rem}
-  .scrapbook-work .scrap-card .scrap-tagline{font-size:.83rem}
-}
-
-/* Compact phone cards must never let long copy cover the action link. */
-@media(max-width:690px){
-  .scrapbook-work .scrap-card .scrap-description{
+  #work .scrap-card .scrap-copy{padding-top:26px;width:54%}
+  #work .scrap-card h3{font-size:clamp(1.85rem,7vw,2.45rem)}
+  #work .scrap-card .scrap-tagline{font-size:.9rem}
+  #work .scrap-card .scrap-description{
+    font-size:.72rem;
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:3;
     overflow:hidden;
   }
+  #work .other-work-label{flex-basis:100%;margin-bottom:1px}
 }
-@media(max-width:380px){
-  .scrapbook-work .scrap-card .scrap-description{-webkit-line-clamp:2}
+@media(max-width:390px){
+  #work .scrap-card,
+  #work .scrap-card:nth-child(4),
+  #work .scrap-card:nth-child(5){height:291px;min-height:291px;padding:18px}
+  #work .scrap-card .scrap-copy{width:58%;padding-top:26px}
+  #work .scrap-card h3{font-size:1.83rem}
+  #work .scrap-card .scrap-tagline{font-size:.84rem}
+  #work .scrap-card .scrap-description{-webkit-line-clamp:2;font-size:.68rem}
+  #work .scrap-card .scrap-open{left:18px;bottom:15px}
+  #work .scrap-card .scrap-art{width:55%;max-width:55%}
+}
+@media(prefers-reduced-motion:reduce){
+  #work .scrap-card,#work .scrap-open span,#work .other-work a{transition:none!important;animation:none!important}
+  #work .scrap-card:hover{translate:0}
 }

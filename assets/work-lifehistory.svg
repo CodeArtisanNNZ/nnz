@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="Vintage journal showing prehistoric life, fossils and the passage of time">
+<defs>
+  <filter id="lift" x="-30%" y="-30%" width="170%" height="170%">
+    <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#07111d" flood-opacity=".35"/>
+  </filter>
+  <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#eee4cf"/><stop offset="1" stop-color="#d8c4a5"/>
+  </linearGradient>
+  <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#273a4b"/><stop offset="1" stop-color="#121d2c"/>
+  </linearGradient>
+</defs>
+<g transform="rotate(8 240 178)">
+  <rect x="83" y="29" width="296" height="291" rx="12" fill="#76828b" opacity=".26"/>
+  <rect x="61" y="21" width="299" height="303" rx="12" fill="url(#book)" filter="url(#lift)"/>
+  <path d="M84 29v285" stroke="#9d866d" stroke-width="3"/>
+  <path d="M94 62h242M94 80h242M94 98h242M94 242h242M94 260h242M94 278h242" stroke="#ad9d85" stroke-width="1" opacity=".45"/>
+  <rect x="103" y="109" width="219" height="119" rx="4" fill="#e5dac1" stroke="#a78f72" stroke-width="2"/>
+  <text x="213" y="52" font-family="Georgia,serif" font-size="18" fill="#6d554c" text-anchor="middle">THE HISTORY OF LIFE</text>
+  <text x="213" y="70" font-family="monospace" font-size="9" letter-spacing="2.2" fill="#756858" text-anchor="middle">NOTES FROM LONG AGO</text>
+  <g fill="#756a55" stroke="#756a55" stroke-width="1.5">
+    <path d="M138 187q-26-30-9-45q11-16 35-5l32 12q36-12 48-8l8 16q-18 14-31 15l-17-3q7 18-9 30q-22 8-43-6l-15-2z"/>
+    <path d="M236 151l27-31 14 4-16 27 14 12 12-3-4 14-37 3z"/>
+    <path d="M162 192l-4 23 12 0 9-22M208 187l9 23 13 0-9-29" stroke-width="6" fill="none"/>
+    <path d="M129 144l-19-9 5 21 17 3z"/>
+    <circle cx="251" cy="132" r="2.8" fill="#f1e6ce" stroke="none"/>
+  </g>
+  <path d="M114 211q68-19 185 6" stroke="#b49773" stroke-width="2" fill="none" opacity=".7"/>
+  <g font-family="monospace" font-size="10" fill="#756550">
+    <text x="104" y="301">past</text><text x="295" y="301">today</text>
+  </g>
+  <path d="M150 298h139" stroke="#927660" stroke-width="2" stroke-dasharray="4 5"/>
+  <circle cx="218" cy="298" r="5" fill="#775f8d"/>
+</g>
+<g transform="translate(322 211) rotate(-20)" filter="url(#lift)">
+  <circle cx="47" cy="37" r="48" fill="#e2cfab" stroke="#917a62" stroke-width="8"/>
+  <circle cx="47" cy="37" r="36" fill="#c4d6d6" opacity=".42"/>
+  <path d="M82 74l48 51" stroke="#967f75" stroke-width="16" stroke-linecap="round"/>
+  <path d="M34 16q-15 16-11 40" stroke="#fff8df" stroke-width="6" opacity=".6" fill="none"/>
+</g>
+<g transform="translate(26 98) rotate(-14)">
+  <rect width="104" height="74" rx="3" fill="#d7b7ad" filter="url(#lift)"/>
+  <text x="13" y="26" fill="#544558" font-size="13" font-family="cursive">curiosity</text>
+  <text x="13" y="44" fill="#544558" font-size="13" font-family="cursive">has no end</text>
+  <path d="M69 61q9-12 15 0q-1 8-8 11q-12-7-7-11Z" fill="none" stroke="#9a6678" stroke-width="2"/>
+</g>
+<g fill="#dfc89c"><circle cx="404" cy="54" r="2.2"/><circle cx="430" cy="114" r="1.4"/><circle cx="32" cy="245" r="2.4"/></g>
+<g fill="none" stroke="#dccaa4" stroke-width="2.5" stroke-linecap="round">
+  <path d="M411 77v17m-9-8h18"/>
+  <path d="M36 40l7 8m14-4-8 7"/>
+</g>
+</svg>
